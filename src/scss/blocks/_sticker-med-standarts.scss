@@ -1,0 +1,235 @@
+.sticker-article .sticker-article_content-subtitle:empty,
+.sticker-article_content-authors:empty,
+.sticker-article_content-years:empty,
+.sticker-article_content-ISBN:empty,
+.sticker-article_content-mkb:empty,
+.sticker-article_group-top:empty,
+.sticker-article_group-bottom:empty,
+.sticker-article_rapid:empty {
+    display: none;
+}
+
+.sticker-med-standards .sticker-med-standards_group .sticker-med-standards_group-top:empty {
+    display: none
+}
+
+.sticker-med-standards {
+    padding: 30px 60px 18px 60px;
+    border-radius: 8px;
+    border: 2px solid #E3E9FF;
+    background: #FFF;
+    position: relative;
+    margin-bottom: 26px;
+
+    .sticker-med-standards_type {
+        @media(min-width: 769px) {
+            @include stickerBook(#072a84, url('images/icon/encyclopedia-before.svg'));
+        }
+
+        @media(max-width: 768px) {
+            @include mobileStickerBook(#072a84);
+        }
+    }
+
+    @media(max-width:768px) {
+        padding: 0px 15px 18px 15px;
+        border: none;
+        border-bottom: 2px solid #E3E9FF;
+    }
+}
+
+.sticker-med-standards_title {
+    margin-bottom: 12px;
+    position: relative;
+
+    a {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        line-height: 30px;
+
+        span {
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            line-height: 30px;
+            transition: color .3s ease;
+
+            &:hover {
+                color: #526ece;
+            }
+
+            @media(max-width:768px) {
+                font-size: 18px;
+            }
+        }
+
+        @media(max-width:768px) {
+            font-size: 18px;
+        }
+    }
+
+    .sticker-med-standards_num {
+        position: absolute;
+        left: -57px;
+        color: #323232;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 18px;
+        top: 5px;
+        width: 40px;
+        text-align: right;
+
+        @media(max-width:768px) {
+            position: relative;
+            font-size: 18px;
+            left: 0;
+            top: 0;
+            margin-right: 5px;
+          }
+    }
+
+    @media(max-width:768px) {
+        font-size: 18px;
+    }
+}
+
+// .sticker-med-standards .sticker-article_content-subtitle,
+// .sticker-article_content-authors,
+// .sticker-article_content-years,
+// .sticker-article_content-ISBN,
+// .sticker-article_content-mkb {
+//     margin-bottom: 12px;
+//     line-height: 20px;
+
+//     .head {
+//         color: rgba(0, 0, 0, 0.50);
+//         font-style: normal;
+//         font-weight: 400;
+//         line-height: 18px;
+//         margin-right: 20px;
+//     }
+
+//     .value {
+//         color: #000;
+//         font-weight: 700;
+//         line-height: 18px;
+//         /* 120% */
+//     }
+// }
+
+.sticker-med-standards .sticker-med-standards_group .sticker-med-standards_group-top {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 44px;
+    margin-bottom: 12px;
+
+    .annot-hdr-invis,
+    .annot-hdr-invis a {
+        color: #526ECE;
+        line-height: 18px;
+        cursor: pointer;
+        display: inline-block;
+        position: relative;
+        transition: color .3s ease;
+
+        &:hover {
+            color: #072A84;
+        }
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 18px;
+            height: 13px;
+            margin-left: 10px;
+            background-image: url('images/icon/generalInformationArrowDown.svg');
+            background-repeat: no-repeat;
+        }
+        @media(max-width:768px) {
+            font-size: 13px;
+          }
+    }
+
+    .annot-hdr-vis,
+    .annot-hdr-vis a {
+        color: #072A84;
+        line-height: 18px;
+        cursor: pointer;
+        display: inline-block;
+
+        &::after {
+            position: absolute;
+            content: "";
+            width: 18px;
+            height: 13px;
+            margin-left: 10px;
+            background-image: url('images/icon/generalInformationArrowUp.svg');
+            background-repeat: no-repeat;
+        }
+        @media(max-width:768px) {
+            font-size: 13px;
+          }
+    }
+
+}
+
+
+
+.sticker-med-standards .sticker-med-standards_group-bottom {
+
+    .brief_toc_item,
+    .brief_toc_doc {
+        margin-bottom: 12px;
+    }
+
+    .brief_toc_item a,
+    .brief_toc_doc a {
+        color: #526ECE;
+        line-height: 18px;
+        /* 120% */
+        transition: color .3s ease;
+        text-decoration: underline;
+
+
+        &:hover {
+            color: #072A84;
+        }
+        @media(max-width:768px) {
+            font-size: 13px;
+          }
+    }
+
+    .annot-value-vis {
+        margin-bottom: 12px;
+        @media(max-width:768px){
+          font-size: 13px;
+        }
+      }
+      .annot-value-invis {
+        @media(max-width:768px){
+          font-size: 13px;
+        }
+      }
+}
+
+.sticker-med-standards .sticker-article_rapid {
+
+    .rapid-toc-item {
+        margin-bottom: 12px;
+
+        a {
+            color: #526ECE;
+            line-height: 18px;
+            /* 120% */
+            transition: color .3s ease;
+            text-decoration: none;
+
+            &:hover {
+                color: #072A84;
+            }
+
+        }
+
+    }
+}

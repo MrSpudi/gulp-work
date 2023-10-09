@@ -1,0 +1,46 @@
+.tingle-modal .tingle-modal-box__content h2 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 7px;
+}
+
+.tingle-modal .tingle-modal-box__content img {
+    width: 50%;
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+    margin-bottom: 5px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, .25);
+    @media(max-width:900px){
+        width: 100%;
+        margin-bottom: 15px;
+    }
+}
+
+.tingle-modal .tingle-modal-box__content small {
+    display: block;
+    margin-bottom: 15px;
+    color: rgba(0, 0, 0, 0.50);
+}
+
+.tingle-modal .tingle-modal-box__content p {
+    padding-bottom: 5px;
+}
+
+.tingle-modal .tingle-modal-box__content hr {
+    background: var(--menu-bg);
+    height: 2px;
+    margin: 10px 0px;
+}
+
+.tingle-modal .tingle-modal-box__content {
+    padding: 0;
+}
+
+.tingle-modal .tingle-modal-box__content>div {
+    margin-top: 15px;
+}
+
+.tingle-modal .tingle-modal-box {
+    padding: 3em 3em;
+}

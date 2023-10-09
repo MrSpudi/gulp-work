@@ -1,0 +1,259 @@
+.sticker-article .sticker-book_column-content-authors:empty,
+.sticker-book_column-content-years:empty,
+.sticker-book_column-content-ISBN:empty,
+.sticker-book_column-avatar:empty,
+.sticker-book_group-top:empty,
+.sticker-book_group-bottom:empty,
+.sticker-book_rapid:empty {
+  display: none;
+}
+
+.sticker-book {
+  padding: 30px 60px 18px 60px;
+  border-radius: 8px;
+  border: 2px solid #E3E9FF;
+  background: #FFF;
+  position: relative;
+  margin-bottom: 26px;
+
+  .sticker-book_type {
+    @media(min-width: 769px) {
+      @include stickerBook(#40A957, url('images/icon/book-before.svg'));
+    }
+
+    @media(max-width: 768px) {
+      @include mobileStickerBook(#40A957);
+    }
+  }
+
+  .sticker-book_column {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    column-gap: 15px;
+
+    .sticker-book_column-content {
+      width: 80%;
+    }
+
+    .sticker-book_column-avatar {
+      width: 70px;
+    }
+  }
+
+  @media(max-width:768px) {
+    padding: 0px 15px 18px 15px;
+    border: none;
+    border-bottom: 2px solid #E3E9FF;
+  }
+}
+
+
+.sticker-book_column-content-title {
+  margin-bottom: 12px;
+  position: relative;
+
+  a {
+    color: #000;
+    font-size: 24px;
+    font-style: normal;
+    line-height: 30px;
+
+    @media(max-width:768px) {
+      font-size: 18px;
+    }
+
+    span {
+      color: #000;
+      font-size: 24px;
+      font-style: normal;
+      line-height: 30px;
+      transition: color .3s ease;
+
+      &:hover {
+        color: #526ece;
+      }
+
+      @media(max-width:768px) {
+        font-size: 18px;
+      }
+    }
+
+  }
+
+  .sticker-book_column-content-num {
+    position: absolute;
+    left: -57px;
+    color: #323232;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 18px;
+    top: 5px;
+    width: 40px;
+    text-align: right;
+
+    @media(max-width:768px) {
+      position: relative;
+      font-size: 18px;
+      left: 0;
+      top: 0;
+      margin-right: 5px;
+    }
+  }
+
+}
+
+.sticker-book .sticker-book_column-content-authors,
+.sticker-book_column-content-years,
+.sticker-book_column-content-ISBN {
+  margin-bottom: 12px;
+  line-height: 20px;
+
+  .head {
+    color: rgba(0, 0, 0, 0.50);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-right: 20px;
+
+    @media(max-width:768px) {
+      font-size: 13px;
+    }
+  }
+
+  .value {
+    color: #000;
+    font-weight: 700;
+    line-height: 18px;
+
+    @media(max-width:768px) {
+      font-size: 13px;
+    }
+
+    /* 120% */
+  }
+}
+
+.sticker-book .sticker-book_group .sticker-book_group-top {
+  display: flex;
+  justify-content: flex-start;
+  column-gap: 44px;
+  margin-bottom: 12px;
+
+  .annot-hdr-invis,
+  .annot-hdr-invis a {
+    color: #526ECE;
+    line-height: 18px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: color .3s ease;
+
+    &:hover {
+      color: #072A84;
+    }
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 13px;
+      margin-left: 10px;
+      background-image: url('images/icon/generalInformationArrowDown.svg');
+      background-repeat: no-repeat;
+    }
+
+    @media(max-width:768px) {
+      font-size: 13px;
+    }
+  }
+
+  .annot-hdr-vis,
+  .annot-hdr-vis a {
+    color: #072A84;
+    line-height: 18px;
+    cursor: pointer;
+    display: inline-block;
+
+    &::after {
+      position: absolute;
+      content: "";
+      width: 18px;
+      height: 13px;
+      margin-left: 10px;
+      background-image: url('images/icon/generalInformationArrowUp.svg');
+      background-repeat: no-repeat;
+    }
+
+    @media(max-width:768px) {
+      font-size: 13px;
+    }
+  }
+
+}
+
+
+
+.sticker-book .sticker-book_group-bottom {
+
+  .brief_toc_item,
+  .brief_toc_doc {
+    margin-bottom: 12px;
+  }
+
+  .brief_toc_item a,
+  .brief_toc_doc a {
+    color: #526ECE;
+    line-height: 18px;
+    /* 120% */
+    transition: color .3s ease;
+    text-decoration: underline;
+
+
+    &:hover {
+      color: #072A84;
+    }
+
+    @media(max-width:768px) {
+      font-size: 13px;
+    }
+  }
+
+  .annot-value-vis {
+    margin-bottom: 12px;
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+  .annot-value-invis {
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+}
+
+.sticker-book .sticker-book_rapid {
+
+  .rapid-toc-item {
+    margin-bottom: 12px;
+
+    a {
+      color: #526ECE;
+      line-height: 18px;
+      /* 120% */
+      transition: color .3s ease;
+      text-decoration: none;
+
+      &:hover {
+        color: #072A84;
+      }
+
+      @media(max-width:768px) {
+        font-size: 13px;
+      }
+    }
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+}

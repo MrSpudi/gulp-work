@@ -1,0 +1,101 @@
+.about-project {
+    padding-top: 52px;
+    max-width: 1230px;
+    margin: 0 auto;
+    padding: 40px 15px;
+
+    h1 {
+        font-size: 36px;
+        font-style: normal;
+        font-weight: 400;
+        padding: 0px 0px 40px 0px;
+        @media(max-width:600px){
+            font-size: 26px;
+        }
+    }
+
+    p {
+        line-height: 1.3em;
+        margin-bottom: 12px;
+    }
+
+    a {
+        text-decoration: none;
+        color: #526ECE;
+        transition: color .3s ease;
+
+        &:hover {
+            color: #072A84;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+
+        li {
+            padding-left: 20px;
+            background-image: url('images/icon/about_list.svg');
+            background-repeat: no-repeat;
+            background-position: top left;
+            /* background-size: contain; */
+            background-position-y: 4px;
+
+
+        }
+    }
+
+    .about-project_developer {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+    }
+
+    .about-project_contacts {
+        margin-top: 12px;
+
+        .about-project_contacts-one div {
+            margin-bottom: 10px;
+        }
+
+        .about-project_contacts-two div {
+            margin-bottom: 10px;
+        }
+    }
+}
+
+.privacy-policy {
+    .privacy-policy_bold {
+        font-weight: 700;
+    }
+
+    .privacy-policy_list-one {
+        padding-left: 15px;
+
+        span {
+            font-weight: 700;
+        }
+    }
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        row-gap: 12px;
+        margin-bottom: 12px;
+        padding-left: 30px;
+
+        li {
+            background-image: url('images/icon/about_list.svg');
+            background-repeat: no-repeat;
+            background-position: top left;
+            /* background-size: contain; */
+            background-position-y: 4px;
+
+
+        }
+    }
+    .privacy-policy_list{
+        padding-left: 15px;
+    }
+}

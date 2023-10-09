@@ -1,0 +1,216 @@
+.sticker-clinrec {
+    padding: 30px 60px 18px 60px;
+    border-radius: 8px;
+    border: 2px solid #E3E9FF;
+    background: #FFF;
+    position: relative;
+    margin-bottom: 26px;
+
+    .sticker-clinrec_type {
+
+        @media(min-width: 769px) {
+            @include stickerBook(#526ECE, url('images/icon/klinrec-before.svg'));
+          }
+      
+          @media(max-width: 768px) {
+            @include mobileStickerBook(#526ECE);
+          }
+    }
+
+    .sticker-clinrec_title {
+        margin-bottom: 12px;
+        position: relative;
+    
+        a {
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            line-height: 30px;
+    
+            span {
+                color: #000;
+                font-size: 24px;
+                font-style: normal;
+                line-height: 30px;
+                transition: color .3s ease;
+    
+                &:hover {
+                    color: #526ece;
+                }
+                @media(max-width:768px) {
+                    font-size: 18px;
+                  }
+            }
+            @media(max-width:768px) {
+                font-size: 18px;
+              }
+        }
+    
+        .sticker-clinrec_num {
+            position: absolute;
+            left: -57px;
+            color: #323232;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 18px;
+            top: 5px;
+            width: 40px;
+            text-align: right;
+    
+            @media(max-width:768px) {
+                position: relative;
+                font-size: 18px;
+                left: 0;
+                top: 0;
+                margin-right: 5px;
+              }
+        }
+
+    }
+
+
+    @media(max-width:768px) {
+        padding: 0px 15px 18px 15px;
+        border: none;
+        border-bottom: 2px solid #E3E9FF;
+      }
+}
+    .sticker-clinrec .sticker-clinrec_group .sticker-clinrec_group-top {
+        display: flex;
+        justify-content: flex-start;
+        column-gap: 44px;
+        margin-bottom: 12px;
+    
+        .annot-hdr-invis,
+        .annot-hdr-invis a {
+            color: #526ECE;
+            line-height: 18px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            transition: color .3s ease;
+    
+            &:hover {
+                color: #072A84;
+            }
+    
+            &::after {
+                position: absolute;
+                content: "";
+                width: 18px;
+                height: 13px;
+                margin-left: 10px;
+                background-image: url('images/icon/generalInformationArrowDown.svg');
+                background-repeat: no-repeat;
+            }
+            @media(max-width:768px) {
+                font-size: 13px;
+              }
+        }
+    
+        .annot-hdr-vis,
+        .annot-hdr-vis a {
+            color: #072A84;
+            line-height: 18px;
+            cursor: pointer;
+            display: inline-block;
+    
+            &::after {
+                position: absolute;
+                content: "";
+                width: 18px;
+                height: 13px;
+                margin-left: 10px;
+                background-image: url('images/icon/generalInformationArrowUp.svg');
+                background-repeat: no-repeat;
+            }
+        }
+        @media(max-width:768px) {
+            font-size: 13px;
+          }
+    }
+    
+.sticker-clinrec .sticker-clinrec_year:empty,
+.sticker-clinrec_status:empty,
+.sticker-clinrec_idrf:empty,
+.sticker-clinrec_prim:empty,
+.sticker-clinrec_developer:empty,
+.sticker-clinrec_age-category:empty,
+.sticker-clinrec_group-top:empty{
+    display: none;
+}
+
+.sticker-clinrec .sticker-clinrec_group .sticker-clinrec_group-top:empty{
+    display: none;
+}
+
+.sticker-clinrec .sticker-clinrec_year,
+.sticker-clinrec_status,
+.sticker-clinrec_idrf,
+.sticker-clinrec_prim,
+.sticker-clinrec_developer,
+.sticker-clinrec_age-category {
+  margin-bottom: 12px;
+    line-height: 20px;
+  .head {
+    color: rgba(0, 0, 0, 0.50);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-right: 20px;
+    @media(max-width:768px) {
+        font-size: 13px;
+      }
+  }
+
+  .value {
+    color: #000;
+    font-weight: 700;
+    line-height: 18px;
+    /* 120% */
+    @media(max-width:768px) {
+        font-size: 13px;
+      }
+  }
+}
+
+.klinrec{
+    width: 60%;
+}
+.klinrec .book-card{
+    width: 100%;
+}
+
+.klinrec .sticker-clinrec_year:empty,
+.sticker-clinrec_status:empty,
+.sticker-clinrec_idrf:empty,
+.sticker-clinrec_prim:empty,
+.sticker-clinrec_developer:empty,
+.sticker-clinrec_age-category:empty
+{
+    display: none;
+}
+
+.klinrec .sticker-clinrec_year,
+.sticker-clinrec_status,
+.sticker-clinrec_idrf,
+.sticker-clinrec_prim,
+.sticker-clinrec_developer,
+.sticker-clinrec_age-category {
+  margin-bottom: 12px;
+    line-height: 20px;
+  .head {
+    color: rgba(0, 0, 0, 0.50);
+    font-style: normal;
+    font-weight: 400;
+    line-height: 18px;
+    margin-right: 20px;
+  }
+
+  .value {
+    color: #000;
+    font-weight: 700;
+    line-height: 18px;
+    /* 120% */
+  }
+}

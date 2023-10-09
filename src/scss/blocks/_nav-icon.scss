@@ -1,14 +1,28 @@
 /* Nav Icon */
+
+.mobile-nav__wrapper{
+    width: 60px;
+    height: 60px;
+    background-color: #072A84;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    @media (max-width: 768px) {
+            display: flex;
+    }
+}
 .mobile-nav-btn {
+
 	--time: 0.1s;
 
-	--width: 40px;
+	--width: 30px;
 	--height: 30px;
 
 	--line-height: 4px;
 	--spacing: 6px;
 
-	--color: #000;
+	--color: #fff;
 	--radius: 4px;
 
 	/* Fixed height and width */
@@ -22,6 +36,13 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+    // position: relative;
+// &::before{
+//     content:'';
+//     background-image:url('images/icon/circle_menu.svg');
+//     background-position:center;
+//     background-repeat:no-repeat;
+// }
 }
 
 .nav-icon {
@@ -81,12 +102,7 @@
 /* Layout */
 
 .mobile-nav-btn {
-	z-index: 999;
+	z-index: 100;
 	// display: none;
 }
 
-// @media (max-width: 1000px) {
-// 	.mobile-nav-btn {
-// 		display: block;
-// 	}
-// }

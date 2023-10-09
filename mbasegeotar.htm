@@ -1,0 +1,2299 @@
+<!-- ###########################################################################
+
+  m1c-beta.mbasegeotar.ru
+
+  hello guest
+  
+  <div>#call=draw(account-by-step,null,shell,type:bm4)</div>
+
+mbase_total
+	mbase_all
+	mbase_articles
+	mbase_clin_rec
+	mbase_library
+	mbase_pharma_mnn
+
+mbase_library
+
+	mbase_library
+	mbase_5mcc
+	mbase_gold
+	mbase_nac_ruc
+	mbase_monog
+	mbase_text_books
+	mbase_pharm
+	mbase_tact
+
+########################################################################### -->
+
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+
+<!-- ################################# Меню пользователя в личном кабинете ##################################### -->
+<div id='user_menu' class="user_menu">
+<div class="user_menu_container">
+  <div class="user_menu_link user_menu_link--myData">
+    <!-- #call=draw( tab_anchor, null, cur_user, label:general;a_cur_class_name:utab_anchor_cur) -->
+  </div>
+
+  <div class="user_menu_link user_menu_link--changePassword">
+    <!-- #call=draw( tab_anchor, null, cur_user, label:login; a_cur_class_name:utab_anchor_cur) -->
+  </div>
+
+<!-- <li><span class="wrap-tab-link">#call=draw( tab_anchor, null, cur_user, label:merge; a_cur_class_name:utab_anchor_cur )</span></li> -->
+
+  <div class="user_menu_link user_menu_link--Bookmarks">
+    <!-- #call=draw( tab_anchor, null, cur_user, label:bookmarks;a_cur_class_name:utab_anchor_cur ) -->
+  </div>
+
+<!-- <li><span class="wrap-tab-link">#call=draw( tab_anchor, null, cur_user, label:my_answers; a_cur_class_name:utab_anchor_cur )</span></li> -->
+
+  <div class="user_menu_link user_menu_link--Access">
+    <!-- #call=draw( tab_anchor, null, cur_user, label:my_account;a_cur_class_name:utab_anchor_cur ) -->
+  </div>
+
+<!-- <li><span class="wrap-tab-link">#call=draw( tab_anchor, null, cur_user, label:usr_manage; a_cur_class_name:utab_anchor_cur )</span></li> -->
+<!-- <li><span class="wrap-tab-link">#call=draw( tab_anchor, null, cur_user, label:reports; a_cur_class_name:utab_anchor_cur )</span></li> -->
+</div>
+</div>
+<!-- ################################# ////Меню пользователя в личном кабинете ##################################### -->
+
+<!-- ################################ Мои данные ###################################### -->
+<div id='cur_user.main_frame.general' class="for-scroll">
+  <!-- #call=include(rds2pp_guide_rgu.main_frame.general,mbasegeotar) -->
+</div>
+<div id='rds2pp_guide_rgu.main_frame.general' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(user_menu,mbasegeotar) -->
+    <!-- #call=include(main_content_general,mbasegeotar) -->
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+<div id="main_content_general" class="main_content_general">
+
+  <!-- #call=include(errors_ok,mbasegeotar) -->
+
+  <div class="general_wrapper">
+    <!-- <div class="general_close">
+      <a href='' id='cancel' class="general_close">Отказ</a>
+    </div> -->
+
+    <h1 class="general_title">Мои данные</h1>
+
+    <div class="general_data">
+      <label for="FamilyName">
+        <span>Фамилия</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <input type='text' name='FamilyName' id='FamilyName'>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="NameAndFName">
+        <span>Имя, Отчество</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <input type='text' name='NameAndFName' id='NameAndFName'>
+      </div>
+    </div>
+
+    <div class="general_data general_data_container">
+      <label>
+        <span>Статус</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-radio">#call=draw(radio-list,null,cur_user,guide:WhoIsUser;name:WhoUser)</div>
+    </div>
+
+    <div class="general_data">
+      <label for="ed_med_hi">
+        <span>Основная специальность</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <select id='ed_med_hi' name='ed_med_hi'>
+          <option value='--'>---------------------------
+          <option>
+        </select>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="ed_med_hi">
+        <span>2-я специальность</span>
+      </label>
+      <div class="general_data-input">
+        <select id='ed_med_hi2' name='ed_med_hi2'>
+          <option value='--'>---------------------------
+          <option>
+        </select>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="ed_med_hi">
+        <span>3-я специальность</span>
+      </label>
+      <div class="general_data-input">
+        <select id='ed_med_hi3' name='ed_med_hi3'>
+          <option value='--'>---------------------------
+          <option>
+        </select>
+      </div>
+    </div>
+
+    <div class="general_data general_data_region_container">
+      <label>
+        <span>Страна/Регион</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input general_data-region">#call=select_region(Country,Region,maybeother,)</div>
+    </div>
+
+    <div class="general_data">
+      <label for="EMail">
+        <span>E-mail</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <input type='text' name='EMail' id='EMail'>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="Phone">
+        <span>Телефон</span>
+      </label>
+      <div class="general_data-input">
+        <input type='text' name='Phone' id='Phone'>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="Phone">
+        <span>Язык:</span>
+      </label>
+      <div class="general_data-input">
+        <select id='Lang'></select>
+      </div>
+    </div>
+
+    <div class="general_data_btn">
+      <a href='#call=click( cur_user, update( general ) )'>Сохранить изменения</a>
+    </div>
+
+  </div>
+
+  <script>
+    <![CDATA[
+    function sortSelect(selectId) {
+      var list, i, switching, b, shouldSwitch;
+      list = document.getElementById(selectId);
+      switching = true;
+      /* Make a loop that will continue until
+      no switching has been done: */
+      while (switching) {
+        // Start by saying: no switching is done:
+        switching = false;
+        b = list.getElementsByTagName("OPTION");
+        // Loop through all list items:
+        for (i = 0; i < (b.length - 1); i++) {
+          // Start by saying there should be no switching:
+          shouldSwitch = false;
+          /* Check if the next item should
+          switch place with the current item: */
+          if (b[i].innerHTML.toLowerCase() > b[i + 1].innerHTML.toLowerCase()) {
+            /* If next item is alphabetically lower than current item,
+            mark as a switch and break the loop: */
+            shouldSwitch = true;
+            break;
+          }
+        }
+        if (shouldSwitch) {
+          /* If a switch has been marked, make the switch
+          and mark the switch as done: */
+          b[i].parentNode.insertBefore(b[i + 1], b[i]);
+          switching = true;
+        }
+      }
+    }
+
+    sortSelect('ed_med_hi');
+    sortSelect('ed_med_hi2');
+    sortSelect('ed_med_hi3');
+    ]]>
+  </script>
+
+</div>
+<!-- ################################# /////Мои данные ##################################### -->
+
+<!-- ################################# Смена пароля ##################################### -->
+<div id='rds2pp_guide_rgu.main_frame.login'>
+
+  <div class="mbase-wrapper">
+    <!-- #call=include(mbaseNav,mbasegeotar) -->
+    <div class="mbase-content">
+      <!-- #call=include(top_header-home,mbasegeotar) -->
+      <!-- #call=include(user_menu,mbasegeotar) -->
+      <!-- #call=include(main_content_login,mbasegeotar) -->
+      <!-- #call=include(footer,mbasegeotar) -->
+    </div>
+  </div>
+
+</div>
+
+<div id="main_content_login" class="main_content_general">
+
+  <!-- #call=include(errors_ok,mbasegeotar) -->
+  <div class="general_wrapper">
+
+    <!-- <div class="general_close">
+      <a href='' id='cancel' class="general_close">Отказ</a>
+    </div> -->
+
+    <h1 class="general_title">Смена пароля</h1>
+
+    <div class="general_data">
+      <label for="Password">
+        <span>Текущий пароль</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <input type='password' name='Password' id='Password' value=''>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="Password_new">
+        <span>Новый пароль</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <input type='password' name='Password_new' id='Password_new' value=''>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="Password_conf">
+        <span>Пароль (подтверждение)</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input">
+        <input type='password' name='Password_conf' id='Password_conf' value=''>
+      </div>
+    </div>
+
+    <div class="general_data">
+      <label for="captcha">
+        <span>Текст на картинке</span>
+        <span class="general_data-danger">*</span>
+      </label>
+      <div class="general_data-input general_data-captcha">
+        <input type='text' name='captcha'>
+        <!-- #call=captcha(reload) -->
+      </div>
+    </div>
+
+    <div class="general_data_btn">
+      <a href='#call=click( cur_user, update( login ) )'>Сохранить изменения</a>
+    </div>
+
+  </div>
+</div>
+<!-- ################################# ////Смена пароля ##################################### -->
+
+<!-- ################################# Доступ ##################################### -->
+<div id='rds2pp_guide_rgu.main_frame.my_account' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(user_menu,mbasegeotar) -->
+    <!-- #call=include(main_content_account,mbasegeotar) -->
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+<div id="main_content_account" class="main_content_general main_content_general-access">
+  <!-- #call=include(errors_inside,mbasegeotar) -->
+  <div class="general_wrapper">
+
+    <!-- <div class="general_close">
+      <a href='' id='cancel' class="general_close">Отказ</a>
+    </div> -->
+
+    <div class="general_table">
+      <div class="general_table-include">
+        <h4>Включенные коды</h4>
+        <div class="include-code">#call=draw( owned_pins, null, cur_user, what_to_draw:all_valid )</div>
+      </div>
+
+      <div class="general_table-disabled">
+        <h4>Выключенные коды</h4>
+        <div class="include-code">#call=draw( owned_pins, null, cur_user, what_to_draw:all_invalid )</div>
+      </div>
+
+    </div>
+
+  </div>
+
+  <hr class="general_stroke">
+
+  <div class="general_wrapper">
+    <div class="code-wrapper">#call=include( subscribe,book-pieces )</div>
+  </div>
+
+
+</div>
+
+<div id='pin_sticker' class="wrap-attantion-guest">
+  <!-- #call=include(subscribe,book-pieces) -->
+</div>
+<!-- ################################# ////Доступ ##################################### -->
+
+<!-- ################################# Закладки ##################################### -->
+<div id='rds2pp_guide_rgu.main_frame.bookmarks' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(user_menu,mbasegeotar) -->
+    <!-- #call=include(main_content_bookmarks,mbasegeotar) -->
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+<div id="main_content_bookmarks" class="main_content_general main_content_general-bookmarks">
+
+  <div class="general_wrapper">
+    <h1 class="general_title">Мои закладки</h1>
+        <!-- #call=draw(bmarks,null,usr_own_bmarks_mb4) -->
+  </div>
+
+</div>
+<!-- ################################# ////Закладки ##################################### -->
+
+<!-- ################################# Смена данных ##################################### -->
+<div id='rds2pp_guide_rgu.main_frame.update' class="mbase-wrapper">
+
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(user_menu,mbasegeotar) -->
+    <div class="user_container">
+      <div class="tabpanel app-tabs-panel">
+        <!-- #call=include(update_client,mbasegeotar) -->
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div>
+
+<div id='update_client'>
+  <!-- #call=draw(update_info,null,cur_user) -->
+</div>
+
+<div id='update-general' class="update-user">
+  <div class="code-form">
+    <h1 class="title">Основные данные были изменены</h1>
+  </div>
+</div>
+
+<div id='update-pword_updated_ok' class="update-user">
+  <div class="code-form">
+    <h1 class="title">Пароль был изменен</h1>
+  </div>
+</div>
+
+<div id='update-nothing_updated_ok' class="update-user">
+  <div class="code-form">
+    <h1 class="title">Пароль не был изменен</h1>
+  </div>
+</div>
+<!-- ################################# ////Смена данных ##################################### -->
+
+<!-- ################################# Фрейм гостя ##################################### -->
+<div id='guest_login_frame' class="guest_login_frame">
+  <a href='#call=href(cur_user)' id="href_cur_user">
+    <span>Войти</span>
+    <img src="images/icon/enter.svg" alt="enter">
+  </a>
+</div>
+<!-- ################################# ///Фрейм гостя ##################################### -->
+
+<!-- ################################# Фрейм текущего пользователя ##################################### -->
+<div id='reg_login_frame' class="reg_login_frame" onclick="toggleLoginFrame(event)">
+  <div id="btn_down_user" class="reg_login_frame-user" >
+    <!-- <a class="reg_login_frame-open" href="#call=href(cur_user,general)"> -->
+      <a class="reg_login_frame-open">
+              <!-- #call=draw(salutation,null,cur_user) -->
+      </a>
+
+  </div>
+
+  <!-- <a href="#" onClick="{onElb('reg_login_frame-menu');return false;}">#call=draw(salutation,null,cur_user)</a> -->
+
+  <div id='reg_login_frame-menu' class="reg_login_frame-menu">
+    <!-- <div class="close_drop_user">X</div> -->
+    <!-- <div class="close_drop_user"><a href="#" onClick="{offEl('reg_login_frame-menu'); return false;}">X</a></div> -->
+
+    <div class="reg_login_frame-profile">
+      <h3>Профиль</h3>
+      <li>#call=draw( tab_anchor, null, cur_user, label:general; a_cur_class_name:utab_anchor_cur)</li>
+
+      <li>#call=draw( tab_anchor, null, cur_user, label:login; a_cur_class_name:utab_anchor_cur )</li>
+      <!-- <li role="presentation">#call=draw( tab_anchor, null, cur_user, label:merge; a_cur_class_name:utab_anchor_cur )</li> -->
+      <li role="presentation">#call=draw( tab_anchor, null, cur_user, label:bookmarks; a_cur_class_name:utab_anchor_cur)
+      </li>
+      <!-- <li role="presentation">#call=draw( tab_anchor, null, cur_user, label:my_answers; a_cur_class_name:utab_anchor_cur)</li> -->
+      <li role="presentation">#call=draw( tab_anchor, null, cur_user, label:my_account;
+        a_cur_class_name:utab_anchor_cur)</li>
+      <li role="presentation" class="studmedlib-btn-exit"><a href='#call=click( cur_user, unsign )'
+          class="btn btn-exit">Выход</a></li>
+      <!-- <li role="presentation" class="divider"></li>
+          <li role="presentation" class="dropdown-header"><span>Анкета</span></li> 
+          <li role="presentation"><a href='#call=href(pages,quest_ank)' id='a_questionnaire'><span id='talk3p.htm.mb4.your_mind'>Ваше мнение о сайте</span></a></li>
+          <li role="presentation" class="divider"></li> -->
+    </div>
+    <!-- <div class="reg_login_frame-admin"> -->
+    <!-- <h3>Администрирование</h3>
+      <li role="presentation">#call=draw( tab_anchor, null, cur_user, label:usr_manage; a_cur_class_name:utab_anchor_cur)</li>
+      <li role="presentation">#call=draw( tab_anchor, null, cur_user, label:reports; a_cur_class_name:utab_anchor_cur )</li> -->
+    <!-- <li role="presentation" class="divider"></li> -->
+    <!-- </div> -->
+
+  </div>
+
+</div>
+<!-- ################################# Фрейм текущего пользователя ##################################### -->
+
+<!-- ################################# Боковое меню ##################################### -->
+<nav class="mbase-nav" id="mbaseNav">
+  <!-- #call=menu(main_menu,ul) -->
+  <script>
+const mainMenus = document.querySelectorAll("ul.level1");
+mainMenus.forEach(mainMenu => {
+  const mainMenuElements = mainMenu.querySelectorAll("li");
+  mainMenuElements.forEach(li => {
+    const span = li.querySelector("span");
+    if (span !== null) {
+      li.classList.add('none');
+    }
+  });
+});
+  </script>
+</nav>
+<!-- ################################# ////Боковое меню ##################################### -->
+
+<!-- ################################# Шапка сайта ##################################### -->
+<div id='top_header-home' class="top-header">
+  <div class="container">
+    <div class="top-header-home" >
+      <div class="top-header-home__logo">
+        <a href='#call=href(pages,index)'>
+          <img src="images/icon/logo.svg" alt="">
+        </a>
+      </div>
+
+      <div class="top-header-home__auth">
+        <a href="#call=href(pages,help)">
+        <div class="top-header-home__about">
+        </div>
+      </a>
+        <!-- #call=draw(btn_profile,null,cur_user,fragm_guest:guest_login_frame;fragm_reg:reg_login_frame) -->
+      </div>
+
+      <div class="mobile-nav__wrapper" id="reader2023_burgerBtn" onclick="reader2023_toggleBurger('reader2023_burgerBtn','reader2023_mobile_burger-nav', 'reader2023_mobile_main-header_burger-btn_active','reader2023_mobile_burger-nav_active')">
+        <div class="mobile-nav-btn">
+          <div class="nav-icon" ></div>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- #call=include(reader2023_mobile_burger-nav,reader-2023) -->
+
+
+  
+  </div>
+  <script>
+    if (document.querySelector('.reg_login_frame') != null) {
+      const regLoginFrames = document.querySelectorAll(".reg_login_frame");
+      regLoginFrames.forEach(function (regLoginFrame) {
+        const regLoginFramesLink = regLoginFrame.querySelector("a");
+        if (regLoginFramesLink) {
+          const fullName = regLoginFramesLink.textContent;
+          const initials = fullName.split(" ").map(name => name.charAt(0));
+          regLoginFramesLink.textContent = initials.join("");
+        }
+      });
+    }
+  </script>
+</div>
+<!-- ################################# ////Шапка сайта ##################################### -->
+
+
+<!-- ################################# Подвал сайта ##################################### -->
+<footer id="footer" class="footer">
+  <div class="container">
+    <div class="footer__wrapper">
+      <div class="footer__grid">
+        <div class="footer__information">
+          <div class="footer__information-logo">
+            <a href="#call=href(pages,index)"><img src="images/icon/logo.svg" alt=""></a>
+          </div>
+          <span>Справочно-информационная<br>система. Все права<br> защищены 2023</span>
+          <div class="footer__information-link"><a href="#call=href(pages,privacy_policy)">Политика конфиденциальности</a></div>
+        </div>
+
+        <div class="footer__navigation">
+          <nav class="footer__navigation-one">
+            <a href="#call=href(pages,about)">О проекте</a>
+            <a href="#call=href(pages,company)">О компании</a>
+            <a href="#call=href(pages,contacts)">Контакты</a>
+          </nav>
+          <nav class="footer__navigation-two">
+            <a href="#call=href(pages,licenses-certificates)">Лицензии и сертификаты</a>
+            <a href="#call=href(pages,help)">Инструкция</a>
+          </nav>
+          <div class="footer__navigation-adress">
+            Россия, Москва,<br> ул.Садовническая, д. 11, стр.12
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__callback">
+        <div class="footer__callback-top">
+          <div class="footer__callback-text">Телефон для связи</div>
+          <div class="footer__callback-phone"><a href="tel:+79175504908">+7 (917) 550 49 08</a></div>
+          <div class="footer__callback-phone"><a href="tel:+74959213907">+7 (495) 921 39 07</a></div>
+        </div>
+        <div class="footer__callback-bottom">
+          <div class="footer__callback-row">
+            <div class="footer__callback-text">Отдел продаж MBaseGeotar</div>
+            <div class="footer__callback-email"><a href="mailto:sale@studentlibrary.ru">sale@studentlibrary.ru</a></div>
+          </div>
+          <div class="footer__callback-row">
+            <div class="footer__callback-text">Техническая поддержка</div>
+            <div class="footer__callback-email"><a href="mailto:support@studentlibrary.ru">support@studentlibrary.ru</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="scroll-to-top" class="none"><img src="images/icon/arrow-site-up.svg" alt="site-up"></div>
+  <script>
+    const scrollToTopButton = document.getElementById('scroll-to-top');
+    window.addEventListener('scroll', () => {
+      if (window.pageYOffset > 100) {
+        scrollToTopButton.classList.remove('none');
+      } else {
+        scrollToTopButton.classList.add('none');
+      }
+    });
+    scrollToTopButton.addEventListener('click', () => {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+      });
+    });
+  </script>
+
+</footer>
+<!-- ################################# /////Подвал сайта ##################################### -->
+
+<!-- ################################# Стикер - словарь ##################################### -->
+<div id='thesaurus-list_sticker' class="sticker-thesaurus">
+  <div class="sticker-thesaurus_type">Словарь</div>
+  <div class="sticker-thesaurus_title"> 
+    <span id='list_item_no' class="sticker-thesaurus_num">1000</span>
+    <span class="sticker-thesaurus_name"><span id='thesaurus.name'>?</span></span>
+  </div>
+  <div class="sticker-thesaurus_definition"><span id='thesaurus.definition'>definition</span></div>
+</div>
+<!-- ################################# /////Стикер - словарь ##################################### -->
+
+<!-- ################################# Стикер - Книжка ##################################### -->
+<div id='sticker.sengine.book' class="sticker-book">
+
+  <div class="sticker-book_type">Библиотека</div>
+
+  <div class="sticker-book_column">
+    <div class="sticker-book_column-content">
+      <div class="sticker-book_column-content-title">
+        <span id='list_item_no' class="sticker-book_column-content-num">1000</span>
+        <a href="#call=custom(book,goto_content,get_current_id(book))"><span id='book.title'>заголовок</span></a>
+      </div>
+      
+      <div class="sticker-book_column-content-authors"><!-- #call=draw(value,null,book,not_empty:1;field:authors;--></div>
+      <div class="sticker-book_column-content-years"><!-- #call=draw(value,null,book,field:year;head:text(ru`Дата%20публикации);not_empty:1;)--></div>
+      <div class="sticker-book_column-content-ISBN"><!-- #call=draw(value,null,book,not_empty:1;field:isbn;head:text(ru`ISBN)) --></div>
+    
+    </div>
+    <div class="sticker-book_column-avatar"><!-- #call=draw(avatar,null,book) --></div>
+  </div>
+
+  <div class="sticker-book_group">
+    <div class="sticker-book_group-top"><!-- #call=draw(a-coincidences,null,book) --><!-- #call=draw(a-annotation,null,book) --></div>
+    <div class="sticker-book_group-bottom"><!-- #call=draw(div-annotation,null,book) --><!-- #call=draw(div-coincidences,null,book) --></div>
+  </div>
+
+  <div class="sticker-book_rapid"><!--#call=draw(rapid-toc,null,book)--></div>
+
+</div>
+<!-- ################################# //////Стикер - Книжка ##################################### -->
+
+<!-- ################################# Стикер - Энциклопедия ##################################### -->
+<div id='sticker.sengine.phantom.doc' class="sticker-article">
+  
+  <div class="sticker-article_type">Базовые статьи</div>
+
+  <div class="sticker-article_title">
+    <span id='list_item_no' class="sticker-article_num">1000</span>
+    <a href="#call=custom(book,goto_content,get_current_id(book))"><span id='book.title'>заголовок</span></a>
+  </div>
+  
+    <div class="sticker-article_content-subtitle"><!-- #call=draw(value,null,book,field:book_title;)--></div>
+    <div class="sticker-article_content-authors"><!-- #call=draw(value,null,book,field:authors;)--></div>
+    <div class="sticker-article_content-years"><!-- #call=draw(value,null,book,field:year;head:text(ru`Дата%20публикации);not_empty:1;)--></div>
+    <div class="sticker-article_content-ISBN"><!-- #call=draw(value,null,book,not_empty:1;field:isbn;head:text(ru`ISBN)) --></div>
+    <div class="sticker-article_content-mkb"><!-- #call=draw(value,null,book,field:mkb;head:text(ru`Коды%20МКБ);not_empty:1;)--></div> 
+
+  <div class="sticker-article_group">
+    <div class="sticker-article_group-top"><!-- #call=draw(a-coincidences,null,book) --><!-- #call=draw(a-annotation,null,book) --></div>
+    <div class="sticker-article_group-bottom"><!-- #call=draw(div-annotation,null,book) --><!-- #call=draw(div-coincidences,null,book) --></div>
+  </div>
+
+  <div class="sticker-article_rapid"><!--#call=draw(rapid-toc,null,book)--></div>
+
+</div>
+<!-- ################################# //////Стикер - Энциклопедия ##################################### -->
+
+<!-- ################################# Стикер - Клиническая рекомендация ##################################### -->
+<div id='sticker.sengine.klinrec' class="sticker-clinrec">
+
+  <div class="sticker-clinrec_type">Клинические рекомендации</div>
+  <div class="sticker-clinrec_title">
+    <span id='list_item_no' class="sticker-clinrec_num">1000</span>
+    <a href="#call=custom(book,goto_content,get_current_id(book))"><span id='book.title'>заголовок</span></a>
+  </div>
+
+    <div class="sticker-clinrec_year"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:year;head:text(ru`Год%20создания)); --></div>
+    <div class="sticker-clinrec_status"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:rstat;head:text(ru`Статус)); --></div>
+    <div class="sticker-clinrec_idrf"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:mzID;head:text(ru`ID%20МЗ%20РФ)); --></div>
+    <div class="sticker-clinrec_prim"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:active_from;head:text(ru`Применяется%20с)); --></div>
+    <div class="sticker-clinrec_developer"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:developer;head:text(ru`Разработчик)); --></div>
+    <div class="sticker-clinrec_age-category"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:age;head:text(ru`Возрастная%20категория)); --></div>
+
+  <div class="sticker-clinrec_group">
+    <div class="sticker-clinrec_group-top"><!-- #call=draw(a-coincidences,null,book) --><!-- #call=draw(div-coincidences,null,book) --></div>
+  </div>
+
+</div>
+<!-- ################################# ///Стикер - Клиническая рекомендация ##################################### -->
+
+<!-- ################################# Стикер - Лекарственный препарат ##################################### -->
+<div id='sticker.sengine.phantom.pharma_mnn' class="sticker-pharma">
+
+  <div class="sticker-pharma_type">Лекарственные препараты (МНН)</div>
+
+  <div class="sticker-pharma_title">
+    <span id='list_item_no' class="sticker-pharma_num">1000</span>
+    <a href="#call=custom(pharma_mnn,goto_content,get_current_id(pharma_mnn))"><span id='book.title'>заголовок</span></a>
+  </div>
+
+<div class="sticker-pharma_farm-group"><!-- #call=draw(value,null,pharma_mnn,field:klinfarm_group;head:text(ru`Фарм%20группа:);not_empty:1;)--></div>
+
+<div class="sticker-pharma_group">
+  <div class="sticker-pharma_group-top"><!-- #call=draw(a-coincidences,null,book) --><!-- #call=draw(a-annotation,null,book) --></div>
+  <div class="sticker-pharma_group-bottom"><!-- #call=draw(div-annotation,null,book) --><!-- #call=draw(div-coincidences,null,book) --></div>
+</div>
+
+</div>
+<!-- ################################# //////Стикер - Лекарственный препарат ##################################### -->
+
+<!-- ################################# Стикер - медецинские стандарты ##################################### -->
+<div id='sticker.sengine.phantom.med_standards' class="sticker-med-standards">
+  <div class="sticker-med-standards_type">Стандарты</div>
+
+  <div class="sticker-med-standards_title">
+    <span id='list_item_no' class="sticker-med-standards_num">1000</span>
+    <a href="#call=custom(book,goto_content,get_current_id(book))"><span id='book.title'>заголовок</span></a>
+  </div>
+  
+  <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:idx_key_date;head:text(ru`Год%20создания:)); --></div>
+  <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:edit_phase;head:text(ru`Статус:)); --></div>
+  <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:med_help_type;head:text(ru`Вид%20медицинской%20помощи:)); --></div>
+  <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:clinic_type;head:text(ru`Условия%20оказания%20медицинской%20помощи:)); --></div>
+  <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:form_med_help;head:text(ru`Форма%20оказания%20медицинской%20помощи:)); --></div>
+  <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:age_type;head:text(ru`Возрастная%20категория:)); --></div>
+
+  <div class="sticker-med-standards_group">
+    <div class="sticker-med-standards_group-top"><!-- #call=draw(a-coincidences,null,book) --><!-- #call=draw(a-annotation,null,book) --></div>
+    <div class="sticker-med-standards_group-bottom"><!-- #call=draw(div-annotation,null,book) --><!-- #call=draw(div-coincidences,null,book) --></div>
+  </div>
+
+  <div class="sticker-med-standards_rapid"><!--#call=draw(rapid-toc,null,book)--></div>
+</div>
+<!-- ################################# //////Стикер - медецинские стандарты ##################################### -->
+
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+
+<div id='doc3.main_frame.(id)'>
+
+  <!-- #call=include(doc_main_frame_content,reader-2023) -->
+
+</div><!-- doc3.main_frame.(id) -->
+
+<!-- ###################################################################### -->
+
+<!-- ################################# Страница с титулом базовые статьи ##################################### -->
+<div id='article.book.main_frame.(id)' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <div class="container">
+      <div class="book_wrapper">
+        <!-- #call=draw(reader_data,null,book ) -->
+
+        <div id='doc3_toc' class="reader2023_main_content_doc3_toc">div - doc3 table of content</div><!-- doc3_toc -->
+
+        <div class="book-card stickerSenginePhantom">
+
+            <div class="stickerSengineTitle">
+              <a href='#call=href(book,get_current_id(book))'><span id='book.title'>заголовок</span></a>
+            </div>
+            
+            <div class="stickerSenginePhantom-subtitle">#call=draw(value,null,book,field:book_title;)</div>
+            
+            <div class="stickerSenginePhantom-authors">#call=draw(value,null,book,field:book_authors;)</div>
+          
+            <div class="stickerSenginePhantom-years">#call=draw(value,null,book,field:year;head:text(ru`Дата%20публикации);not_empty:1;)</div>
+            
+            <div class="stickerSenginePhantom-ISBN">
+              <span>ISBN</span>
+              <!-- #call=draw(value,null,book,field:isbn;not_empty:1;) -->
+            </div>
+            
+            <div >#call=draw(value,null,book,field:mkb;head:text(ru`Коды%20МКБ);not_empty:1;)</div>
+          
+
+        </div>
+
+        <script>
+          call_reader("doc3_toc", "toc", "true");
+        </script>
+
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div> 
+<!-- ################################# ////Страница с титулом базовые статьи ##################################### -->
+
+<!-- ################################# Страница с титулом лекарственные препараты (МНН) ##################################### -->
+<div id='pharma_mnn.book.main_frame.(id)' class="mbase-wrapper">
+    <!-- #call=include(mbaseNav,mbasegeotar) -->
+    <div class="mbase-content">
+      <!-- #call=include(top_header-home,mbasegeotar) -->
+      <!-- #call=include(search_sleeper,mbasegeotar) -->
+      <div class="container">
+        <div class="book_wrapper">
+          <!-- #call=draw(reader_data,null,book ) -->
+  
+          <div class="reader-doc3">
+            <div id='doc3_toc' class="reader2023_main_content_doc3_toc mbase_book_doc3">div - doc3 table of content</div>
+            <!-- doc3_toc -->
+            <div id="mbase_main-loader" class="reader2023_main-loader mbase_main-loader"></div>
+          </div>
+  
+          <div class="klinrec med_standards">
+            <div class="book-card stickerSengineklinrec med_standards">
+  
+              <div class="stickerSengineTitle">
+                <a href='#call=href(book,get_current_id(book))'><span id='book.title'>заголовок</span></a>
+              </div>
+              <div class="sticker-pharma_farm-group"><!-- #call=draw(value,null,pharma_mnn,field:klinfarm_group;head:text(ru`Фарм%20группа:);not_empty:1;)--></div>
+
+          </div>
+  
+          <div class="book-btn">#call=draw(goto_content,null,book)</div>
+          </div>
+  
+  
+          <script>
+            call_reader("doc3_toc", "toc", "true");
+          </script>
+  
+        </div>
+      </div>
+      <!-- #call=include(footer,mbasegeotar) -->
+    </div>
+</div>
+<!-- ################################# ////Страница с титулом лекарственные препараты (МНН) ##################################### -->
+
+<!-- ################################# Страница с титулом клинические рекомендации ##################################### -->
+<div id='klinrec.book.main_frame.(id)' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <div class="container">
+      <div class="book_wrapper">
+        <!-- #call=draw(reader_data,null,book ) -->
+
+        <div class="reader-doc3">
+          <div id='doc3_toc' class="reader2023_main_content_doc3_toc mbase_book_doc3">div - doc3 table of content</div>
+          <!-- doc3_toc -->
+          <div id="mbase_main-loader" class="reader2023_main-loader mbase_main-loader"></div>
+        </div>
+
+        <div class="klinrec">
+          <div class="book-card sticker-klinrec-page">
+
+            <div class="sticker-clinrec_year"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:year;head:text(ru`Год%20создания)); --></div>
+            <div class="sticker-clinrec_status"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:rstat;head:text(ru`Статус)); --></div>
+            <div class="sticker-clinrec_idrf"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:mzID;head:text(ru`ID%20МЗ%20РФ)); --></div>
+            <div class="sticker-clinrec_prim"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:active_from;head:text(ru`Применяется%20с)); --></div>
+            <div class="sticker-clinrec_developer"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:developer;head:text(ru`Разработчик)); --></div>
+            <div class="sticker-clinrec_age-category"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:age;head:text(ru`Возрастная%20категория)); --></div>
+        
+        </div>
+        <div class="book-btn">#call=draw(goto_content,null,book)</div>
+        </div>
+
+
+        <script>
+          call_reader("doc3_toc", "toc", "true");
+        </script>
+
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+<!-- ################################# //////Страница с титулом клинические рекомендации ##################################### -->
+
+<!-- ################################# Страница с титулом медецинские стандарты ##################################### -->
+<div id='med_standards.book.main_frame.(id)' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <div class="container">
+      <div class="book_wrapper">
+        <!-- #call=draw(reader_data,null,book ) -->
+
+        <div class="reader-doc3">
+          <div id='doc3_toc' class="reader2023_main_content_doc3_toc mbase_book_doc3">div - doc3 table of content</div>
+          <!-- doc3_toc -->
+          <div id="mbase_main-loader" class="reader2023_main-loader mbase_main-loader"></div>
+        </div>
+
+        <div class="klinrec med_standards">
+          <div class="book-card stickerSengineklinrec med_standards">
+
+
+            <div class="stickerSengineTitle">
+              <a href='#call=href(book,get_current_id(book))'><span id='book.title'>заголовок</span></a>
+            </div>
+            
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:idx_key_date;head:text(ru`Год%20создания:)); --></div>
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:edit_phase;head:text(ru`Статус:)); --></div>
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:med_help_type;head:text(ru`Вид%20медицинской%20помощи:)); --></div>
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:clinic_type;head:text(ru`Условия%20оказания%20медицинской%20помощи:);onmult_list:1;onmult_class:b_s_med_s_list;on_codes:1); --></div>
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:form_med_help;head:text(ru`Форма%20оказания%20медицинской%20помощи:)); --></div>
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:age_type;head:text(ru`Возрастная%20категория:)); --></div>
+
+
+            <div class="b_s_med_s"><!-- #call=draw(by-source-value,null,book,not_empty:1;field:mkb_group;head:text(ru`Код%20по%20МКБ-10:);onmult_list:1;onmult_class:b_s_med_s_list;on_codes:1); --></div>
+        </div>
+
+        <div class="book-btn">#call=draw(goto_content,null,book)</div>
+        </div>
+
+
+        <script>
+          call_reader("doc3_toc", "toc", "true");
+        </script>
+
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+<!-- ################################# ////Страница с титулом медецинские стандарты ##################################### -->
+
+<!-- ################################# Страница с титулом библиотека ##################################### -->
+<div id='book.main_frame.(id)' class="mbase-wrapper">
+  <!-- #call=solve(set_cur_id(bibliodata,get_current_id(book)) -->
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+
+    <div class="container ">
+      <!-- <h2><a href="#call=href(pages,index)">home</a></h2> -->
+
+      <div class="book_wrapper">
+        <!-- #call=draw(reader_data,null,book ) -->
+
+        <div class="reader-doc3">
+          <div id='doc3_toc' class="reader2023_main_content_doc3_toc mbase_book_doc3">div - doc3 table of content</div>
+          <!-- doc3_toc -->
+          <div id="mbase_main-loader" class="reader2023_main-loader mbase_main-loader"></div>
+        </div>
+
+        <div class="book-card">
+          <div class="stickerBookColumn">
+            <div class="stickerBookLeft">
+
+              <div class="b_s_authors"><!-- #call=draw(value,null,book,not_empty:1;field:authors;head:text(ru`Авторы:)); --></div>
+              
+              <div class="b_s_title"><!--#call=draw(h2,null,book,field:title;)--></div>
+
+              <div class="b_s_publishing"><!-- #call=draw(value,null,book,not_empty:1;field:publisher;head:ru`Издательство) --></div>
+              
+              <div class="b_s_type_publishing"><!-- #call=draw(value,null,bibliodata,not_empty:1;field:pubtype;head:text(ru`Тип%20издания)) --></div>
+        
+              <div class="b_s_type_year"><!-- #call=draw(value,null,book,not_empty:1;field:year;head:text(ru`Год%20издания)) --></div>
+
+              <div class="b_s_type_ISBN"><!-- #call=draw(value,null,book,not_empty:1;field:isbn;head:text(ru`ISBN)) --></div>
+
+              <div class="b_s_type_UDK"><!-- #call=draw(value,null,book,not_empty:1;field:udk;head:text(ru`УДК)) --></div>
+
+              <div class="b_s_type_BBK"><!-- #call=draw(value,null,book,not_empty:1;field:bbk;head:text(ru`ББК)) --></div>
+
+              <div class="b_s_type_authors_mark"><!-- #call=draw(value,null,book,not_empty:1;field:azn;head:text(ru`Авторский%20знак)) --></div>
+
+              <div class="b_s_type_grif"><!-- #call=draw(value,null,book,not_empty:1;field:grif;head:text(ru`Гриф)) --></div>
+
+            </div>
+            <div class="stickerBookRight"><!-- #call=draw(avatar,null,book) --></div>
+          </div>
+          <div class="b_s_for_annotation"><!-- #call=draw(value,null,book,not_empty:1;field:annotation;) --></div>
+          <div class="wrap-download-update">
+            <span class="wrap-download-update-text">Загружено</span> 
+            <span class="wrap-download-update-data" id='book.idx_key_date'></span>
+          </div>
+          <div class="book-btn">#call=draw(goto_content,null,book)</div>
+        </div>
+
+        <script>
+          call_reader("doc3_toc", "toc", "true");
+        </script>
+
+
+      </div>
+
+
+      <!-- #call=include(footer,mbasegeotar) -->
+    </div>
+
+  </div>
+
+</div>
+<!-- ################################# ////Страница с титулом библиотека ##################################### -->
+
+
+<div id='reader_def' class="reader_def">
+ <!-- #call=include(doc_main_frame_content,reader-2023) -->
+</div><!-- reader_def -->
+
+<div id='pharma_mnn.main_frame.(id)'>
+  <!-- #call=draw(reader,null,pharma_mnn)  -->
+</div><!-- pharma_mnn.main_frame.(id) -->
+
+<div id='med_standards.main_frame.(id)'>
+  <!-- #call=draw(reader,null,med_standards)  -->
+</div><!-- med_standards.main_frame.(id) -->
+
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+
+<div id='pages.main_frame.on_mbase_articles'>
+
+  <!-- #call=solve(switch_kit(sengine,mbase_library)) -->
+  <!-- #call=solve(switch_division(sengine,mbase_articles)) -->
+  <!-- #call=include(sengine.main_frame, mbasegeotar) -->
+
+</div><!-- pages.main_frame.on_mbase_articles -->
+
+<div id='pages.main_frame.on_mbase_clin_rec'>
+
+  <!-- #call=solve(switch_kit(sengine,mbase_library)) -->
+  <!-- #call=solve(switch_division(sengine,mbase_clin_rec)) -->
+  <!-- #call=include(sengine.main_frame, mbasegeotar) -->
+
+</div><!-- pages.main_frame.on_mbase_clin_rec -->
+
+<div id='pages.main_frame.on_mbase_library'>
+  <!-- #call=solve(switch_kit(sengine,mbase_library)) -->
+  <!-- #call=solve(switch_division(sengine,mbase_library)) -->
+  <!-- #call=include(sengine.main_frame, mbasegeotar) -->
+</div>
+
+<div id='pages.main_frame.on_mbase_5mcc'>
+pages.main_frame.on_mbase_5mcc
+</div>
+
+<div id='pages.main_frame.on_mbase_gold'>
+pages.main_frame.on_mbase_gold
+</div>
+
+<div id='pages.main_frame.on_mbase_nac_ruc'>
+pages.main_frame.on_mbase_nac_ruc
+</div>
+
+<div id='pages.main_frame.on_mbase_monog'>
+  <!-- #call=solve(switch_kit(sengine,mb3)) -->
+  <!-- #call=solve(switch_division(sengine,med_monog)) -->
+  <!-- #call=include(sengine.main_frame, mbasegeotar) -->
+</div><!-- pages.main_frame.on_mbase_monog -->
+
+<div id='pages.main_frame.on_mbase_text_books'>
+pages.main_frame.on_mbase_text_books
+</div>
+
+<div id='pages.main_frame.on_mbase_pharm'>
+pages.main_frame.on_mbase_pharm
+</div>
+
+<div id='pages.main_frame.on_mbase_tact'>
+pages.main_frame.on_mbase_tact
+</div>
+
+<div id='pages.main_frame.on_mbase_atl'>
+pages.main_frame.on_mbase_atl
+</div>
+
+<!-- ###################################################################### -->
+
+<div id='pages.main_frame.on_mbase_pharma_mnn'>
+
+  <!-- #call=solve(switch_kit(sengine,mb3)) -->
+  <!-- #call=solve(switch_division(sengine,mbase_pharma_mnn)) -->
+  <!-- #call=include(sengine.main_frame, mbasegeotar) -->
+
+</div><!-- pages.main_frame.on_mbase_pharma_mnn -->
+
+<div id='pharma_mnn.main_frame' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <!-- #call=draw(search_areas,null,sengine) -->
+    <div class="container">
+      <!-- #call=list(pharma_mnn,use:sres-list;file:mbasegeotar) -->
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div><!-- pharma_mnn.main_frame -->
+</div>
+
+<div id="pages.main_frame.on_thesaurus" class="mbase-wrapper">
+  <!-- #call=solve(set_edt_mode(thesaurus,ru)) -->
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <!-- #call=draw(search_areas,null,sengine) -->
+    <div class="container">
+      <!-- #call=list(thesaurus,use:sres-list;file:mbasegeotar) -->
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+<div id='thesaurus.main_frame' class="mbase-wrapper">
+  <!-- #call=solve(set_edt_mode(thesaurus,ru)) -->
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <!-- #call=draw(search_areas,null,sengine) -->
+    <!-- #call=list(thesaurus,use:sres-list;file:mbasegeotar) -->
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+
+<!-- ###################################################################### -->
+
+<div id='pages.main_frame.on_mbase_all'>
+pages.main_frame.on_mbase_all
+</div>
+
+<!-- ################################ Секция вы читали ###################################### -->
+<div id='def_section_read'>
+
+  <div class="Myread_title">
+    <h2>#call=draw( section.head, null, shell, not_empty:1 )</h2>
+    <!-- #.call=draw( section.a-all, null, shell, not_empty:1 )-->
+    <a href="#call=href(pages,my_read)" class="link_all_read">
+      <span id="">Смотреть все</span>
+    </a>
+  </div>
+
+  <div class="swiper myRead-wrapper" id="swiper_readBook">
+    <div class="s-button-prev"></div>
+    <div class="s-button-next"></div>
+    <div class="swiper-wrapper myRead_content">
+      <!-- #call=draw( section.list, null, shell, not_empty:1) -->
+    </div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+  </div><!-- def_section_read -->
+<!-- ################################ ////Секция вы читали ###################################### -->
+
+<!--Прочитанная книжка-->
+<div id='my_read-book-bkt1' class="swiper-slide">
+  <div class="myRead_item myRead_item-book">
+    <div class="myRead_item-book-left">
+      <!-- #call=draw(avatar,null,book) -->
+    </div>
+  
+    <div class="myRead_item-book-right">
+      <div class="myRead_item-title">
+        <span id="book.title">?</span>
+      </div>
+  
+      <div class="myRead_authors">
+        <!-- #call=draw(value,null,book,not_empty:1;field:authors;); -->
+      </div>
+  
+      <div class="myRead_continue">
+        <a id='my_read-anchor'>Продолжить чтение ></a>
+      </div>
+    </div>
+  </div>
+</div><!-- div -->
+<!--Прочитанная книжка-->
+
+<!-- Прочитанная статья -->
+<div id='my_read-book-phantom-doc' class="swiper-slide">
+<div class="myRead_item myRead_item-book">
+  <div class="myRead_item-book-left">
+    <div class="zagl">
+      <img src="images/icon/slide-articles.svg" alt="article">
+    </div>
+  </div>
+
+  <div class="myRead_item-book-right">
+    <div class="myRead_item-title">
+      <span id="book.title">?</span>
+    </div>
+  
+    <div class="myRead_continue">
+      <a id='my_read-anchor'>Продолжить чтение ></a>
+    </div>
+  </div>
+
+</div>
+
+</div><!-- div -->
+<!-- Прочитанная статья -->
+
+<!-- Прочитанный фарм препарат -->
+<div id="my_read-book-phantom-pharma_mnn" class="swiper-slide">
+  <div class="myRead_item myRead_item-book myRead_item-">
+    <div class="myRead_item-book-left">
+      <div class="zagl">
+        <img src="images/icon/slide-pharma.svg" alt="pharma">
+      </div>
+    </div>
+    <div class="myRead_item-book-right">
+      <div class="myRead_item-title">
+        <span id='pharma_mnn.name'>заголовок</span>
+      </div>
+  
+      <div class="myRead_continue">
+        <a id='my_read-anchor'>Продолжить чтение ></a>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+<!-- Прочитанный фарм препарат -->
+
+<!-- Прочитанный мед справочник -->
+<div id="my_read-book-phantom-med_standards" class="swiper-slide">
+  <div class="myRead_item myRead_item-book myRead_item-">
+    <div class="myRead_item-book-left">
+      <div class="zagl">
+        <img src="images/icon/slide_med-standarts.svg" alt="pharma">
+      </div>
+    </div>
+    <div class="myRead_item-book-right">
+      <div class="myRead_item-title">
+        <span id='med_standards.name'>заголовок</span>
+      </div>
+  
+      <div class="myRead_continue">
+        <a id='my_read-anchor'>Продолжить чтение ></a>
+      </div>
+    </div>
+
+
+  </div>
+
+</div>
+<!-- Прочитанный мед справочник -->
+
+<!-- Прочитанные клинические рекомендации-->
+<div id='my_read-book-bkt1-klinrec' class="swiper-slide">
+  <div class="myRead_item myRead_item-book">
+    <div class="myRead_item-book-left">
+      <div class="zagl">
+        <img src="images/icon/slide-clinrec.svg" alt="clinrec">
+      </div>
+    </div>
+    <div class="myRead_item-book-right">
+      <div class="myRead_item-title">
+        <span id="book.title">?</span>
+      </div>
+    
+      <div class="myRead_continue">
+        <a id='my_read-anchor'>Продолжить чтение ></a>
+      </div>
+    </div>
+
+  </div>
+</div>
+<!-- Прочитанные клинические рекомендации-->
+
+<!-- Пустой стикер-->
+<div id='read_empty_sticker'></div>
+<!-- Пустой стикер-->
+
+
+<div id='pages.main_frame.all_rd_books' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <div class="container myReadPage">
+      <h2>
+        Прочитанное
+      </h2>
+      <!-- #call=draw(section, null, shell,
+  
+          area:my_read;
+				  
+				  desktop:mb4;
+				  
+				  total:100;
+				  
+				  file:mbasegeotar;
+                  
+				  section_sticker:def_section_read;
+				  
+				  sticker:my_read_sticker;
+				  
+				  redefine_sticker:1;
+				  
+				  head:text(ru`Вы%20читали);
+				  
+				  empty_sticker:read_empty_sticker) -->
+    </div>
+
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+<!-- ################################ Страница с прочитанными книгами ###################################### -->
+<div id='pages.main_frame.my_read' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <div class="container myReadPage">
+      <h2>
+        Прочитанное
+      </h2>
+      <!-- #call=draw(section, null, shell,
+  
+          area:my_read;
+				  
+				  desktop:mb4;
+				  
+				  total:100;
+				  
+				  file:mbasegeotar;
+                  
+				  section_sticker:def_section_read;
+				  
+				  sticker:my_read_sticker;
+				  
+				  redefine_sticker:1;
+				  
+				  head:text(ru`Вы%20читали);
+				  
+				  empty_sticker:read_empty_sticker) -->
+    </div>
+
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div><!-- pages.main_frame.my_read -->
+<!-- ################################ ///Страница с прочитанными книгами ###################################### -->
+
+<!-- ##############################  Поисковой модуль  ######################################## -->
+
+<div id='search_sleeper' class="search-sleeper">
+  <div class="container">
+    <div class="search-sleeper__wrapper">
+      <h1>Поиск информации</h1>
+      <div class="search-sleeper__top">
+
+<!-- #call=draw(select_search_areas,null,sengine) -->
+
+        <div class="search-sleeper-content">
+          <input class="search-sleeper-text" name="SearchText" id="SearchText" tabindex="1"
+            onfocus="prompts.on_Focus( )" onblur="prompts.on_Blur( )" type="text" autocomplete="off" oninput="handleSearchInputChange()">
+
+          <div class="clear-button" onclick="handleClearButtonClick()">
+            <img src="images/icon/clear_search.svg" alt="clear-input">
+          </div>
+
+          <div id="SearchText_prompts" style="display:none;" class="search-prompts"></div>
+
+          <div class="search-sleeper__bottom">
+
+            <div class="search-sleeper__bottom-item">
+              <input type="checkbox" class="custom-checkbox" id="word_variants" checked>
+              <label for="word_variants">С вариантами написания</label>
+            </div>
+
+            <div class="search-sleeper__bottom-item">
+              <input type="checkbox" class="custom-checkbox" id="all_words" checked>
+              <label for="all_words">Все слова</label>
+            </div>
+
+            <div class="search-sleeper__bottom-item">
+              <input type="checkbox" class="custom-checkbox" id="names_and_tags">
+              <label for="names_and_tags">В названиях и тегах</label>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="search-sleeper-find">
+          <input type="button" id="search" name="search">
+        </div>
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <script>
+    var prompts = new search_prompts;
+  </script>
+  <script>
+    prompts.on_prompts("SearchText", "search", "SearchText_prompts", "prompts")
+  </script>
+
+</div>
+<!-- search_sleeper -->
+
+<!-- ################################ //Поисковой модуль  ###################################### -->
+
+<div id='sengine.main_frame'>
+
+  <div class="mbase-wrapper">
+    <!-- #call=include(mbaseNav,mbasegeotar) -->
+    <div class="mbase-content">
+      <!-- #call=include(top_header-home,mbasegeotar) -->
+      <!-- #call=include(search_sleeper,mbasegeotar) -->
+      <!-- #call=draw(search_areas,null,sengine) -->
+      <!-- #call=list(sengine,use:sres-list;file:mbasegeotar) -->
+      <!-- #call=include(footer,mbasegeotar) -->
+    </div>
+
+  </div>
+
+</div><!-- sengine.main_frame -->
+
+<!-- ###################################################################### -->
+
+<div id="sres-navigator-top" class="sres-navigator-top">
+
+  <!-- <div class="wrap-ul-pagination">
+  <ul class="pagination-ros-num">
+    <li class="pagination-li"><span class="wrap-img-arrow">#call=draw(a-prior,null,list,range_size:3;img:sres-navigator-left.svg;img_gray:sres-navigator-left.svg)</span> </li>
+    <li class="pagination-li">#call=draw(a-first,null,list,range_size:3;not_empty:1;use_pgno:1)</li>
+    <li class="pagination-li">#call=draw(a-prior-range,null,list,range_size:3;img:three-dotes.svg;img_gray:three-dotes-gray.svg)</li>
+    <li class="pagination-li">#call=draw(pgs-range,null,list,range_size:3;a_class:no-active-number-page;cur_pg_class:active-number-page)</li>
+    <li class="pagination-li">#call=draw(a-next-range,null,list,range_size:3;img:three-dotes.svg;img_gray:three-dotes-gray.svg)</li>
+    <li class="pagination-li">#call=draw(a-last,null,list,range_size:3;not_empty:1;use_pgno:1)</li>
+    <li class="pagination-li"><span class="wrap-img-arrow">#call=draw(a-next,null,list,range_size:3;img:sres-navigator-right.svg;img_gray:sres-navigator-right.svg) </span></li>
+  </ul>
+</div> -->
+  <div class="sres-navigator-top-filters">
+    <span>Сортировать по:</span>
+    <div class="sres-navigator-top-filters-items"><!-- #call=draw(orders_selector,null,list,class_cur:wrap-img-link-active; class_other:wrap-img-link-no-active; img_inc:images/icon/arrow-right.svg; img_dec:images/icon/arrow-right.svg; img_gray:images/icon/arrow-right.svg; --></div>
+  </div>
+
+  <div class="sres-navigator-top-result">
+    <span>Выводить по:</span>
+    <div class="sres-navigator-top-sort">#call=draw( sel_pg_rows, null, list, rows:16-50-100;use_all:1;style:box )</div>
+  </div>
+
+</div><!-- sres-navigator-top -->
+
+<!-- ###################################################################### -->
+
+<div id="sres-navigator-bottom" class="sres-navigator-bottom">
+
+  <div class="sres-navigator-bottom-arrow">
+    <!-- #call=draw(a-prior,null,list,range_size:5;img:images/icon/arrow-left.svg;img_gray:images/icon/arrow-left-gray.svg) -->
+  </div>
+  <div class="sres-navigator-bottom-page"><!-- #call=draw(a-first,null,list,range_size:5;not_empty:1;use_pgno:1) --></div>
+  <div class="sres-navigator-bottom-dotes"><!-- #call=draw(a-prior-range,null,list,range_size:5;img:images/icon/three-dotes.svg;img_gray:images/icon/three-dotes-gray.svg) --></div>
+  <div class="sres-navigator-bottom-page">
+    <!-- #call=draw(pgs-range,null,list,range_size:5;a_class:no-active-number-page;cur_pg_class:active-number-page) -->
+  </div>
+  <div class="sres-navigator-bottom-dotes">
+    <!-- #call=draw(a-next-range,null,list,range_size:5;img:images/icon/three-dotes.svg;img_gray:images/icon/three-dotes-gray.svg) -->
+  </div>
+  <div class="sres-navigator-bottom-page"><!-- #call=draw(a-last,null,list,range_size:5;not_empty:1;use_pgno:1) --></div>
+  <div class="sres-navigator-bottom-arrow">
+    <!-- #call=draw(a-next,null,list,range_size:5;img:images/icon/arrow-right.svg;img_gray:images/icon/arrow-right-gray.svg) -->
+  </div>
+
+</div><!-- sres-navigator-bottom -->
+
+<!-- ###################################################################### -->
+
+<div id='sres-list' class="sres-list">
+
+  <div class="mobile-sres-list">
+    <div class="mobile-sres-list_btn">
+      <div class="mobile-sres-list_btn-sort" onclick="mobileFiltersToggle('mobile-sort', 'mobile-sort_active')">Сортировать</div>
+      <div class="mobile-sres-list_btn-filter" onclick="mobileFiltersToggle('mobile-filters', 'mobile-filters_active')">Фильтры</div>
+    </div>
+    <div class="mobile-sres-list_result">
+      <div>Всего результатов:</div>
+      <span> <!--#call=draw(txt-dsp-range,null,list)--></span>
+      <span>из</span>
+      <span> <!--#call=draw(txt-dsp-total,null,list)--></span>
+    </div>
+    <div class="mobile-sres-list_title">
+      <h1> <!--#call=draw(title,null,list)--></h1>
+    </div>
+    <div class="mobile-sres-list_link"><!-- #call=draw(search_areas,null,sengine) --></div>
+    <div><!-- #call=include(sres-navigator-bottom,mbasegeotar) --></div>
+
+    <div class="mobile-filters" id="mobile-filters">
+      <div class="mobile-filters_overlay" onclick="ClosemobileFilters('mobile-filters', 'mobile-filters_active')"></div>
+      <div class="mobile-filters_content">
+        <div class="mobile-filters_header">
+          <div class="mobile-filters_header-title">Фильтры</div>
+          <div class="mobile-filters_header-close" id="close-filters" onclick="ClosemobileFilters('mobile-filters', 'mobile-filters_active')">X</div>
+        </div>
+        <div class="sres-list-navigation-content">
+          <!-- #call=draw(filters,null,sengine) -->
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+  </div>
+
+  <div class="sres-list-content-wrapper">
+
+    <div class="sres-list-left-column">
+      <div class="sres-list-navigation">
+        <div>
+          Всего результатов:
+          <span>#call=draw(txt-dsp-range,null,list)</span>
+          <span>из</span>
+          <span>#call=draw(txt-dsp-total,null,list)</span>
+        </div>
+      </div>
+      <div class="sres-list-navigation-content">
+        <!-- #call=draw(one_term,null,sengine) -->
+        <!-- #call=draw(filters,null,sengine) -->
+      </div>
+    </div>
+
+    <div class="sres-list-right-colum">
+      <div>#call=include(sres-navigator-top,mbasegeotar)</div>
+      <h1>#call=draw(title,null,list)</h1>
+      <div>#call=draw(list_dialog_top,null,shell)</div>
+      <div>#call=draw(list-content,null,list)</div>
+      <div>#call=include(sres-navigator-bottom,mbasegeotar)</div>
+    </div>
+  </div>
+
+
+
+</div><!-- sres-list -->
+
+<!-- ###################################################################### -->
+
+<div id='rds2pp_guide_rgu.main_frame.entry'>
+
+  <div class="mbase-wrapper">
+    <!-- #call=include(mbaseNav,mbasegeotar) -->
+    <div class="mbase-content">
+      <!-- #call=include(top_header-home,mbasegeotar) -->
+      <!-- #call=include(reg_user,mbasegeotar) -->
+      <!-- #call=include(footer,mbasegeotar) -->
+    </div>
+
+  </div>
+
+</div><!-- cur_user.main_frame.entry -->
+
+<div id='reg_user' class="reg_user">
+  <div class="reg_user_container">
+    <!-- #call=draw(account-by-step,null,shell,type:mb4) -->
+  </div>
+  <script>
+    let otherList_dDown = false;
+    let statusList_dDown = false;
+    let stepList_dDown = false;
+
+    document.addEventListener('click', (e) => {
+      //console.log(e.target);
+      if (e.target.id == 'JS_reg_user_list_other') {
+        //console.log("1")
+        rUser_dropDown_other(document.querySelector('#JS_reg_user_list_other'));
+        otherList_dDown = !otherList_dDown;
+      } else
+      if (
+        (e.target.classList != 'reg_user_container_step' &&
+          e.target.tagName.toLowerCase() != 'a' &&
+          e.target.tagName.toLowerCase() != 'input' &&
+          e.target.classList != 'chbs-row'
+        ) && otherList_dDown) {
+        rUser_dropDown_other(document.querySelector('#JS_reg_user_list_other'));
+        otherList_dDown = !otherList_dDown;
+
+      } else {
+        calcOtherSpec(e.target)
+      }
+
+      if (e.target.id == "JS_reg_user_list_spec") {
+        rUser_dropDown_radio(document.querySelector('#JS_reg_user_list_spec'));
+        stepList_dDown = !stepList_dDown;
+        document.querySelector(".other-spec").classList.remove('other-spec_active')
+        otherList_dDown = false
+      } else
+      if (
+        (e.target.classList != 'reg_user_container_step' &&
+          e.target.classList != 'radio-row'
+        ) && stepList_dDown) {
+        rUser_dropDown_radio(document.querySelector('#JS_reg_user_list_spec'));
+        stepList_dDown = !stepList_dDown;
+        getRadioBtn("JS_reg_user_list_spec")
+      } else {
+        getRadioBtn("JS_reg_user_list_spec")
+      }
+
+      if (e.target.id == "JS_reg_user_list_status") {
+        rUser_dropDown_radio(document.querySelector('#JS_reg_user_list_status'));
+        statusList_dDown = !statusList_dDown;
+        document.querySelector(".other-spec").classList.remove('other-spec_active')
+        otherList_dDown = false
+      } else
+      if (
+        (e.target.classList != 'reg_user_container_step' &&
+          e.target.classList != 'radio-row'
+        ) && statusList_dDown) {
+        rUser_dropDown_radio(document.querySelector('#JS_reg_user_list_status'));
+        statusList_dDown = !statusList_dDown;
+        getRadioBtn("JS_reg_user_list_status")
+      } else {
+        getRadioBtn("JS_reg_user_list_status")
+      }
+
+    })
+
+    function rUser_dropDown_other(elem) {
+      let parent = elem.parentNode;
+      //console.log(parent)
+      let child_list = parent.querySelector('.other-spec');
+      //console.log(child_list)
+      child_list.classList.toggle('other-spec_active');
+      //setTimeout(child_list.classList.toggle('other-spec_opacity'), 100);
+    }
+
+    function rUser_dropDown_radio(elem) {
+      let parent = elem.parentNode;
+      let child_list = parent.querySelector('.radio-area');
+      child_list.classList.toggle('radio-spec_active');
+    }
+
+    function getRadioBtn(inputId) {
+      inputId = '#' + inputId;
+      let inputRadio = document.querySelector(inputId);
+      if (inputRadio) {
+        let rowList = inputRadio.parentNode.querySelectorAll('.radio-row');
+        rowList.forEach(element => {
+          if (element.querySelector('input').checked) {
+            inputRadio.value = element.querySelector('a').innerText;
+          }
+        });
+      }
+    }
+  </script>
+</div>
+
+<div id="account-by-step.main_frame.reg_accaunt" class="mbase-wrapper reg-confirmation">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(errors_ok_reg,mbasegeotar) -->
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div>
+
+<!-- ###################################################################### -->
+
+<div id='book_brief_sticker'>
+  book_brief_sticker
+</div>
+
+<div id='read_empty_sticker'>
+  read_empty_sticker
+</div>
+
+<div id='pages.main_frame.index' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(search_sleeper,mbasegeotar) -->
+    <section class="library">
+      <div class="container">
+        <div class="library__cards">
+
+          <div class="library__card">
+            <div class="library__card-title library__card-title--one">
+              <img src='images/icon/medical_literature.svg'>
+              <h2>Поиск</h2>
+            </div>
+            <div class="library__card-content">
+              <div>#call=menu(main_menu-search,ul)</div>
+            </div>
+          </div>
+
+          <div class="library__card">
+            <div class="library__card-title">
+              <img src='images/icon/find_library.svg'>
+              <h2>Библиотека</h2>
+            </div>
+            <div class="library__card-content">
+              <div>#call=menu(main_menu-med-lit,ul)</div>
+            </div>
+          </div>
+
+          <div class="library__card">
+            <div class="library__card-title">
+              <img src='images/icon/working_with_literature.svg'>
+              <h2>Инструменты</h2>
+            </div>
+            <div class="library__card-content">
+              <div>#call=menu(main_menu-rab-lit,ul)</div>
+            </div>
+          </div>
+
+          <div class="library__card">
+            <div class="library__card-title">
+              <img src='images/icon/training_materials.svg'>
+              <h2>Обучение</h2>
+            </div>
+            <div class="library__card-content">
+              <div>#call=menu(main_menu-rab-learn,ul)</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <div class="myRead">
+      <div class="container">
+
+        <!-- #call=draw(section, null, shell,
+
+    area:my_read;
+
+    desktop:mb4;
+
+    total:5;
+
+    file:mbasegeotar;
+
+    section_sticker:def_section_read;
+
+    sticker:my_read_sticker;
+
+    redefine_sticker:1;
+
+    head:text(ru`Вы%20читали);
+
+    empty_sticker:read_empty_sticker) -->
+
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          new Swiper('#swiper_readBook', {
+            // Optional parameters
+            direction: 'horizontal',
+            updateOnWindowResize: true,
+            loop: true,
+            breakpoints: {
+              slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 10,
+            
+              // when window width is >= 640px
+              1024: {
+                slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+
+              }
+            },
+
+
+            pagination: {
+              el: '.swiper-pagination',
+              clickable: true,
+            },
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.s-button-next',
+              prevEl: '.s-button-prev',
+              disabledClass: 'disabled_swiper_button'
+            },
+
+          });
+        });
+      </script>
+
+    </div>
+
+    <div class="news">
+      <div class="container">
+        <h1>Новости здравоохранения</h1>
+        <div class="swiper wcs_news">
+          <div class="wcs-news swiper-wrapper">
+
+          </div>
+        </div>
+
+      </div>
+      <script>
+        wcsNews.render('.wcs-news')
+      </script>
+      <script>
+        
+      </script>
+    </div>
+
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div><!-- pages.main_frame.index -->
+
+<div id='pages.main_frame.library'>
+
+pages.main_frame.library
+
+</div><!-- pages.main_frame.library -->
+
+<div id='pages.main_frame.search'>
+  <div class="mbase-wrapper">
+    <!-- #call=include(mbaseNav,mbasegeotar) -->
+    <div class="mbase-content">
+      <!-- #call=include(top_header-home,mbasegeotar) -->
+      <!-- #call=include(search_sleeper,mbasegeotar) -->
+      <section class="library library--search">
+        <div class="container">
+          <div class="library__cards library__cards--search">
+
+
+              <div class="library__card">
+                <div class="library__card-title library__card-title--one">
+                  <img src='images/icon/clinrec-search.svg'>
+                </div>
+                <div class="library__card-content">
+                  <h2>Клинические<br>рекомендации</h2>
+                  <div>#call=menu(main_menu-search,ul)</div>
+                </div>
+              </div>
+
+              <div class="library__card">
+                <div class="library__card-title">
+                  <img src='images/icon/book-search.svg'>
+                  
+                </div>
+                <div class="library__card-content">
+                  <h2>Книги</h2>
+                  <div style="height: 33px;"></div>
+                  <div>#call=menu(main_menu-med-lit,ul)</div>
+                </div>
+              </div>
+
+              <div class="library__card">
+                <div class="library__card-title">
+                  <img src='images/icon/enc-search.svg'>
+                  
+                </div>
+                <div class="library__card-content">
+                  <h2>Энциклопедия<br>заболеваний</h2>
+                  <div>#call=menu(main_menu-rab-lit,ul)</div>
+                </div>
+              </div>
+
+
+
+              <div class="library__card">
+                <div class="library__card-title">
+                  <img src='images/icon/pharma-search.svg'>
+                  
+                </div>
+                <div class="library__card-content">
+                  <h2>Лекарственные<br>препараты (MHH)</h2>
+                  <div>#call=menu(main_menu-rab-learn,ul)</div>
+                </div>
+              </div>
+
+              <div class="library__card">
+                <div class="library__card-title">
+                  <img src='images/icon/thes-search.svg'>
+                  
+                </div>
+                <div class="library__card-content">
+                  <h2>Словарь</h2>
+                  <div style="height: 33px;"></div>
+                  <div>#call=menu(main_menu-rab-learn,ul)</div>
+                </div>
+              </div>
+
+
+
+          </div>
+        </div>
+      </section>
+      <!-- #call=include(footer,mbasegeotar) -->
+    </div>
+  </div>
+</div><!-- pages.main_frame.search -->
+
+<div id='pages.main_frame.bmarks' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <!-- #call=include(user_menu,mbasegeotar) -->
+    <!-- #call=draw(bmarks,null,usr_own_bmarks_mb4) -->
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div><!-- pages.main_frame.bmarks -->
+
+<div id='pages.main_frame.my_read'>
+</div><!-- pages.main_frame.my_read -->
+
+<div id='pages.main_frame.about' class="mbase-wrapper">
+
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <div class="about-project">
+
+      <h1>О проекте</h1>
+      <div>
+        <p>Справочно-информационная система «MedBaseGeotar» предназначена для практикующих медицинских специалистов,
+          научных сотрудников, преподавателей, аспирантов, ординаторов, студентов старших курсов обучения, руководителей
+          в сфере здравоохранения для оперативного поиска, отбора и чтения необходимой для работы медицинской литературы
+          в едином источнике данных.</p>
+
+        <ul>
+          <li>Ресурс содержит более 400 актуальных клинических рекомендаций, одобренных научно-практическим советом
+            Министерства здравоохранения России и обогащенных полезным контентом для работы, а также более 5000
+            рекомендаций, разработанных врачебными ассоциациями РФ и ведущими зарубежными профессиональными обществами.
+          </li>
+          <li>Пользователям открыт доступ к более, чем 3000 изданий профессиональной медицинской литературы
+            «ГЭОТАР-Медиа»
+            по всем специальностям, включая переведенные на русский язык и адаптированные для отечественных специалистов
+            профильными НМИЦ России всемирно известные книги «Золотой серии» - Терапия по Сесилю (Cecil Textbook of
+            Medicine), Педиатрия по Нельсону (Nelson Textbook of Pediatrics), Кардиология по Херсту (Hurst's the Heart),
+            серия изданий Консультант за 5 минут (5-Minute Clinical Consult) и др.</li>
+          <li>Максимально полный справочник лекарственных средств и БАД с их международными и торговыми наименованиями
+            содержит 48 тысяч наименований.</li>
+          <li>Словарь медицинских терминов содержит 115 тысяч понятий.</li>
+          <li>Умный поиск и удобная система фильтров позволяет быстро получать всю интересующую специалиста информацию и
+            формирует краткую справку по заболеванию/синдрому.</li>
+          <li>Встроенный адаптируемый модуль для чтения дает возможность читать даже объемные книги без необходимости
+            загружать их на своё устройство, а также делать и сохранять заметки к прочитанным текстам.</li>
+          <li>СИС MedBaseGeotar адаптирована для использования на любых устройствах – неограниченный доступ ко всей
+            информации в любое время</li>
+        </ul>
+
+        <p>
+          <div class="about-project_developer">
+           <div><b>Разработчики</b></div> 
+
+          <div>Авторы идеи: Б.И. Нигматулин, Г.Э. Улумбекова, Н.Ф. Прохоренко</div>
+          <div>Руководитель проекта: А.А. Моисеев</div>
+
+          <div>Менеджер проекта: С.В. Шупорина</div>
+          <div>Руководитель отдела IT-разработки: К.С. Шишкин</div>
+        </div>
+        </p>
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+</div><!-- pages.main_frame.about -->
+
+<div id='pages.main_frame.company' class="mbase-wrapper">
+
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <div class="about-project">
+
+      <h1>О компании</h1>
+      <div>
+        <p><b>Общество с ограниченной ответственностью «КОНСУЛЬТАНТ СТУДЕНТА» (ООО «КОНСУЛЬТАНТ СТУДЕНТА»)</b> - IT-компания,
+          разработчик инновационных программных продуктов (программного обеспечения) для практической медицины и
+          медицинского образования всех уровней, выполняющая одновременно функции научно-исследовательской и
+          консалтинговой компании.</p>
+        <p>ООО «КОНСУЛЬТАНТ СТУДЕНТА» в сотрудничестве с издательской группой "ГЭОТАР-Медиа" и ведущими специалистами
+          Национальных медицинских научных центров и институтов, медицинских вузов и региональных органов управления
+          здравоохранением занимается разработкой и изданием широкого спектра методических и обучающих материалов в
+          области здравоохранения и социального обеспечения, в том числе, в рамках федеральных целевых программ
+          «Предупреждение и борьба с социально-значимыми заболеваниями», «Повышение безопасности дорожного движения» и
+          др..</p>
+          <p>С 2013 г. ООО «КОНСУЛЬТАНТ СТУДЕНТА» занимается разработкой и внедрением электронных информационных продуктов.</p>
+          <p>Основные продукты компании:</p>
+        <ul>
+          <li>Платформа MB4 - зарегистрирована Министерством цифрового развития, связи и массовых коммуникаций Российской Федерации в Едином реестре российских программ для электронных вычислительных машин и баз данных и в едином реестре программ для электронных вычислительных машин и баз данных из государств-членов Евразийского экономического союза, за исключением Российской Федерации: запись №4819 от 03.12.2018; класс программного обеспечения (ПО) по классификатору ПО, утвержденному приказом от 22.09.2020 №486: 04.08 - интегрированные платформы для создания приложений.
+          </li>
+          <li>Электронные библиотечные системы «Консультант студента», «Консультант Врача».</li>
+          <li>Справочно-информационная система «MedBaseGeotar».</li>
+        </ul>
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div><!-- pages.main_frame.help -->
+
+
+<div id='pages.main_frame.help' class="mbase-wrapper">
+
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <div class="about-project">
+
+      <h1>Инструкция пользователя</h1>
+
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div><!-- pages.main_frame.help -->
+
+<div id='pages.main_frame.licenses-certificates' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <div class="about-project">
+
+      <h1>Лицензии и сертификаты</h1>
+      <div>
+          <p>Реестр российских программ для электронных вычислительных машин и баз данных и в едином реестре программ для электронных вычислительных машин и баз данных из государств-членов Евразийского экономического союза, за исключением Российской Федерации: №4819 от 03.12.2018:</p>
+        <ul>
+          <li>класс программного обеспечения (ПО) по классификатору ПО, утвержденному приказом от 22.09.2020 №486: 04.08 - интегрированные платформы для создания приложений.</li>
+        </ul>
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div> 
+
+<div id='pages.main_frame.contacts' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <div class="about-project">
+
+      <h1>Контакты</h1>
+      <div>
+        <p>Наш адрес: 115035, ул.Садовническая, д.13, стр.11</p>
+        <ul>
+          <li>Если Вы представляете медицинскую организацию и хотели бы воспользоваться бесплатным 30-дневным периодом
+            для ознакомления с СИС "MedBaseGeotar", напишите нам по адресу электронной почты: 
+            <a href="mailto:info@mbasegeotar.ru">info@mbasegeotar.ru.</a> Наши сотрудники обязательно свяжутся с Вами и расскажут, как предоставить доступ Вашей организации.</li>
+          <li>По вопросам приобретения лицензий для использования СИС "MedBaseGeotar" в Вашей медицинской или
+            образовательной организации напишите нам по адресу электронной почты: 
+            <a href="mailto:sale@studentlibrary.ru">sale@studentlibrary.ru.</a> Наши сотрудники обязательно свяжутся с Вами и ответят на интересующие Вас вопросы.</li>
+          <li>Для получения технической поддержки по СИС "MedBaseGeotar" Вы можете обратиться по адресу электронной
+            почты: 
+            <a href="mailto:support@studentlibrary.ru">support@studentlibrary.ru.</a>
+            Наши сотрудники в кратчайшие сроки свяжутся с Вами и помогут решить
+            все технические проблемы.</li>
+        </ul>
+        <div class="about-project_contacts">
+          <p>В рабочие часы Вы можете связаться с нами по телефонам:</p>
+
+          <ul>
+            <li class="about-project_contacts-one"><div>Техническая поддержка:</div>
+              <div><a href="tel:+79175504908">+7 (917) 550 49 08</a></div>
+              <span><a href="tel:+74959213907">+7 (495) 921 39 07</a></span>
+            </li>
+            <li class="about-project_contacts-two"><div>Менеджер проекта:</div>
+              <div><a href="tel:+79104790171">+7 (910) 479 01 71</a></div>
+              
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div>
+
+<div id='pages.main_frame.privacy_policy' class="mbase-wrapper">
+  <!-- #call=include(mbaseNav,mbasegeotar) -->
+  <div class="mbase-content">
+    <!-- #call=include(top_header-home,mbasegeotar) -->
+    <div class="about-project privacy-policy">
+      <h1>Политика в отношении обработки персональных данных</h1>
+      <div>
+        <p><span class="privacy-policy_bold">1. Общие положения</span></p>
+        <p>Настоящая политика обработки персональных данных составлена в соответствии с требованиями Федерального законаот 27.07.2006. № 152-ФЗ «О персональных данных» (далее — Закон о персональных данных) и определяет порядок обработки персональных данных и меры по обеспечению безопасности персональных данных, предпринимаемые ООО "КОНСУЛЬТАНТ СТУДЕНТА" (далее — Администратор).</p>
+          <p class="privacy-policy_list-one"><span>1.1.</span> Администратор ставит своей важнейшей целью и условием осуществления своей деятельности соблюдение прав и свобод человека и гражданина при обработке его персональных данных, в том числе защиты прав на неприкосновенность частной жизни, личную и семейную тайну.</p>
+          <p class="privacy-policy_list-one"><span>1.2.</span> Настоящая политика Администратора в отношении обработки персональных данных (далее — Политика) применяется ко всей информации, которую Администратор может получить о посетителях веб-сайта <a href="https://mbasegeotar.ru">https://mbasegeotar.ru.</a></p>
+        <p><span class="privacy-policy_bold">2. Основные понятия, используемые в Политике</span></p>
+          <p class="privacy-policy_list-one"><span>2.1.</span> Автоматизированная обработка персональных данных — обработка персональных данных с помощью средств вычислительной техники.</p>
+          <p class="privacy-policy_list-one"><span>2.2.</span> Блокирование персональных данных — временное прекращение обработки персональных данных (за исключением случаев, если обработка необходима для уточнения персональных данных).</p>
+          <p class="privacy-policy_list-one"><span>2.3.</span> Веб-сайт — совокупность графических и информационных материалов, а также программ для ЭВМ и баз данных, обеспечивающих их доступность в сети интернет по сетевому адресу <a href="https://mbasegeotar.ru">https://mbasegeotar.ru.</a></p>
+          <p class="privacy-policy_list-one"><span>2.4.</span> Информационная система персональных данных — совокупность содержащихся в базах данных персональных данных и обеспечивающих их обработку информационных технологий и технических средств.</p>
+          <p class="privacy-policy_list-one"><span>2.5.</span> Обезличивание персональных данных — действия, в результате которых невозможно определить без использования дополнительной информации принадлежность персональных данных конкретному Пользователю или иному субъекту персональных данных.</p>
+          <p class="privacy-policy_list-one"><span>2.6.</span> Обработка персональных данных — любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными, включая сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление, уничтожение персональных данных.</p>
+          <p class="privacy-policy_list-one"><span>2.7.</span> Администратор — государственный орган, муниципальный орган, юридическое или физическое лицо, самостоятельно или совместно с другими лицами организующие и/или осуществляющие обработку персональных данных, а также определяющие цели обработки персональных данных, состав персональных данных, подлежащих обработке, действия (операции), совершаемые с персональными данными.</p>
+          <p class="privacy-policy_list-one"><span>2.8.</span> Персональные данные — любая информация, относящаяся прямо или косвенно к определенному или определяемому Пользователю веб-сайта <a href="https://mbasegeotar.ru">https://mbasegeotar.ru.</a></p>
+          <p class="privacy-policy_list-one"><span>2.9.</span> Персональные данные, разрешенные субъектом персональных данных для распространения, — персональные данные, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных путем дачи согласия на обработку персональных данных, разрешенных субъектом персональных данных для распространения в порядке, предусмотренном Законом о персональных данных (далее — персональные данные, разрешенные для распространения).</p>
+          <p class="privacy-policy_list-one"><span>2.10.</span> Пользователь — любой посетитель веб-сайта <a href="https://mbasegeotar.ru">https://mbasegeotar.ru.</a></p>
+          <p class="privacy-policy_list-one"><span>2.11.</span> Предоставление персональных данных — действия, направленные на раскрытие персональных данных определенному лицу или определенному кругу лиц.</p>
+          <p class="privacy-policy_list-one"><span>2.12.</span> Распространение персональных данных — любые действия, направленные на раскрытие персональных данных неопределенному кругу лиц (передача персональных данных) или на ознакомление с персональными данными неограниченного круга лиц, в том числе обнародование персональных данных в средствах массовой информации, размещение в информационно-телекоммуникационных сетях или предоставление доступа к персональным данным каким-либо иным способом.</p>
+          <p class="privacy-policy_list-one"><span>2.13.</span> Трансграничная передача персональных данных — передача персональных данных на территорию иностранного государства органу власти иностранного государства, иностранному физическому или иностранному юридическому лицу.</p>
+          <p class="privacy-policy_list-one"><span>2.14.</span> Уничтожение персональных данных — любые действия, в результате которых персональные данные уничтожаются безвозвратно с невозможностью дальнейшего восстановления содержания персональных данных в информационной системе персональных данных и/или уничтожаются материальные носители персональных данных.</p>
+        <p><span class="privacy-policy_bold">3. Основные права и обязанности Администратора</span></p>
+          <p class="privacy-policy_list-one"><span>3.1.</span> Администратор имеет право:</p>
+            <ul>
+              <li>получать от субъекта персональных данных достоверные информацию и/или документы, содержащие персональные данные;</li>
+              <li>в случае отзыва субъектом персональных данных согласия на обработку персональных данных, а также направления обращения с требованием о прекращении обработки персональных данных, Администратор вправе продолжить обработку персональных данных без согласия субъекта персональных данных при наличии оснований, указанных в Законе о персональных данных; </li>
+              <li>самостоятельно определять состав и перечень мер, необходимых и достаточных для обеспечения выполнения обязанностей, предусмотренных Законом о персональных данных и принятыми в соответствии с ним нормативными правовыми актами, если иное не предусмотрено Законом о персональных данных или другими федеральными законами.</li>
+            </ul>
+          <p class="privacy-policy_list-one"><span>3.2.</span> Администратор обязан:</p>
+            <ul>
+              <li>предоставлять субъекту персональных данных по его просьбе информацию, касающуюся обработки его персональных данных;</li>
+              <li>организовывать обработку персональных данных в порядке, установленном действующим законодательством РФ;</li>
+              <li>отвечать на обращения и запросы субъектов персональных данных и их законных представителей в соответствии с требованиями Закона о персональных данных;</li>
+              <li>сообщать в уполномоченный орган по защите прав субъектов персональных данных по запросу этого органа необходимую информацию в течение 10 дней с даты получения такого запроса;</li>
+              <li>публиковать или иным образом обеспечивать неограниченный доступ к настоящей Политике в отношении обработки персональных данных;</li>
+              <li>принимать правовые, организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа к ним, уничтожения, изменения, блокирования, копирования, предоставления, распространения персональных данных, а также от иных неправомерных действий в отношении персональных данных;</li>
+              <li>прекратить передачу (распространение, предоставление, доступ) персональных данных, прекратить обработку и уничтожить персональные данные в порядке и случаях, предусмотренных Законом о персональных данных;</li>
+              <li>исполнять иные обязанности, предусмотренные Законом о персональных данных.</li>
+            </ul>
+
+        <p><span class="privacy-policy_bold">4. Основные права и обязанности субъектов персональных данных</span></p>
+          <p class="privacy-policy_list-one"><span>4.1.</span> Субъекты персональных данных имеют право:</p>
+            <ul>
+              <li>получать информацию, касающуюся обработки их персональных данных, за исключением случаев, предусмотренных федеральными законами. Сведения предоставляются субъекту персональных данных Администратором в доступной форме. В этих сведениях не содержатся персональные данные, относящиеся к другим субъектам персональных данных, за исключением случаев, когда имеются законные основания для раскрытия таких персональных данных. Перечень информации и порядок ее получения установлен Законом о персональных данных;</li>
+              <li>требовать от Администратора уточнения его персональных данных, их блокирования или уничтожения в случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки, а также принимать предусмотренные законом меры по защите своих прав;</li>
+              <li>выдвигать условие предварительного согласия при обработке персональных данных в целях продвижения на рынке товаров, работ и услуг;</li>
+              <li>на отзыв согласия на обработку персональных данных, а также, на направление требования о прекращении обработки персональных данных;</li>
+              <li>обжаловать в уполномоченный орган по защите прав субъектов персональных данных или в судебном порядке неправомерные действия или бездействие Администратора при обработке его персональных данных;</li>
+              <li>на осуществление иных прав, предусмотренных законодательством РФ.</li>
+            </ul>
+          <p class="privacy-policy_list-one"><span>4.2.</span> Субъекты персональных данных обязаны:</p>
+            <ul>
+              <li>предоставлять Администратору достоверные данные о себе;</li>
+              <li>сообщать Администратору об уточнении (обновлении, изменении) своих персональных данных.</li>
+            </ul>
+          <p class="privacy-policy_list-one"><span>4.3.</span> Лица, передавшие Администратору недостоверные сведения о себе, либо сведения о другом субъекте персональных данных без согласия последнего, несут ответственность в соответствии с законодательством РФ.</p>
+
+        <p><span class="privacy-policy_bold">5. Принципы обработки персональных данных</span></p>
+          
+          <p class="privacy-policy_list-one"><span>5.1.</span> Обработка персональных данных осуществляется на законной и справедливой основе.</p>
+          <p class="privacy-policy_list-one"><span>5.2.</span> Обработка персональных данных ограничивается достижением конкретных, заранее определенных и законных целей. Не допускается обработка персональных данных, несовместимая с целями сбора персональных данных.</p>
+          <p class="privacy-policy_list-one"><span>5.3.</span> Не допускается объединение баз данных, содержащих персональные данные, обработка которых осуществляется в целях, несовместимых между собой.</p>
+          <p class="privacy-policy_list-one"><span>5.4.</span> Обработке подлежат только персональные данные, которые отвечают целям их обработки.</p>
+          <p class="privacy-policy_list-one"><span>5.5.</span> Содержание и объем обрабатываемых персональных данных соответствуют заявленным целям обработки. Не допускается избыточность обрабатываемых персональных данных по отношению к заявленным целям их обработки.</p>
+          <p class="privacy-policy_list-one"><span>5.6.</span> При обработке персональных данных обеспечивается точность персональных данных, их достаточность, а в необходимых случаях и актуальность по отношению к целям обработки персональных данных. Администратор принимает необходимые меры и/или обеспечивает их принятие по удалению или уточнению неполных или неточных данных.</p>
+          <p class="privacy-policy_list-one"><span>5.7.</span> Хранение персональных данных осуществляется в форме, позволяющей определить субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных данных, если срок хранения персональных данных не установлен федеральным законом, договором, стороной которого, выгодоприобретателем или поручителем по которому является субъект персональных данных. Обрабатываемые персональные данные уничтожаются либо обезличиваются по достижении целей обработки или в случае утраты необходимости в достижении этих целей, если иное не предусмотрено федеральным законом.</p>
+
+        <p><span class="privacy-policy_bold">6. Цели обработки персональных данных</span></p>
+          <p>Цель обработки – предоставление доступа Пользователю к сервисам, информации и/или материалам, содержащимся на веб-сайте <a href="https://mbasegeotar.ru">https://mbasegeotar.ru.</a></p>
+          <p>Персональные данные:</p>
+	          <ul class="privacy-policy_list">
+              <li>фамилия, имя, отчество</li>
+              <li>электронный адрес</li>
+              <li>номер телефона</li>
+              <li>сведения об уровне образования и специальности</li>
+            </ul>
+
+          <p>Правовые основания:</p>
+            <ul class="privacy-policy_list">
+              <li>уставные (учредительные) документы Администратора</li>
+              <li>Виды обработки персональных данных:	</li>
+              <li>сбор, запись, систематизация, накопление, хранение, уничтожение и обезличивание персональных данных</li>
+            </ul>
+ 
+        <p><span class="privacy-policy_bold">7. Условия обработки персональных данных</span></p>
+          <p class="privacy-policy_list-one"><span>7.1.</span> Обработка персональных данных осуществляется с согласия субъекта персональных данных на обработку его персональных данных.</p>
+          <p class="privacy-policy_list-one"><span>7.2.</span> Обработка персональных данных необходима для достижения целей, предусмотренных международным договором Российской Федерации или законом, для осуществления возложенных законодательством Российской Федерации на администратора функций, полномочий и обязанностей.</p>
+          <p class="privacy-policy_list-one"><span>7.3.</span> Обработка персональных данных необходима для осуществления правосудия, исполнения судебного акта, акта другого органа или должностного лица, подлежащих исполнению в соответствии с законодательством Российской Федерации об исполнительном производстве.</p>
+          <p class="privacy-policy_list-one"><span>7.4.</span> Обработка персональных данных необходима для исполнения договора, стороной которого либо выгодоприобретателем или поручителем по которому является субъект персональных данных, а также для заключения договора по инициативе субъекта персональных данных или договора, по которому субъект персональных данных будет являться выгодоприобретателем или поручителем.</p>
+          <p class="privacy-policy_list-one"><span>7.5.</span> Обработка персональных данных необходима для осуществления прав и законных интересов администратора или третьих лиц либо для достижения общественно значимых целей при условии, что при этом не нарушаются права и свободы субъекта персональных данных.</p>
+          <p class="privacy-policy_list-one"><span>7.6.</span> Осуществляется обработка персональных данных, доступ неограниченного круга лиц к которым предоставлен субъектом персональных данных либо по его просьбе (далее — общедоступные персональные данные).</p>
+          <p class="privacy-policy_list-one"><span>7.7.</span> Осуществляется обработка персональных данных, подлежащих опубликованию или обязательному раскрытию в соответствии с федеральным законом.</p>
+
+        <p><span class="privacy-policy_bold">8. Порядок сбора, хранения, передачи и других видов обработки персональных данных</span></p>
+            <p>Безопасность персональных данных, которые обрабатываются Администратором, обеспечивается путем реализации правовых, организационных и технических мер, необходимых для выполнения в полном объеме требований действующего законодательства в области защиты персональных данных.</p>
+
+            <p class="privacy-policy_list-one"><span>8.1.</span> Администратор обеспечивает сохранность персональных данных и принимает все возможные меры, исключающие доступ к персональным данным неуполномоченных лиц.</p>
+            <p class="privacy-policy_list-one"><span>8.2.</span> Персональные данные Пользователя никогда, ни при каких условиях не будут переданы третьим лицам, за исключением случаев, связанных с исполнением действующего законодательства, либо в случае, если субъектом персональных данных дано согласие Администратору на передачу данных третьему лицу для исполнения обязательств по гражданско-правовому договору.</p>
+            <p class="privacy-policy_list-one"><span>8.3.</span> В случае выявления неточностей в персональных данных, Пользователь может актуализировать их самостоятельно в личном кабинете на сайте <a href="https://mbasegeotar.ru">https://mbasegeotar.ru.</a> или путем направления Администратору уведомление на адрес электронной почты Администратора info@mbasegeotar.ru с пометкой «Актуализация персональных данных».</p>
+            <p class="privacy-policy_list-one"><span>8.4.</span> Срок обработки персональных данных определяется достижением целей, для которых были собраны персональные данные, если иной срок не предусмотрен договором или действующим законодательством.</p>
+            <p>Пользователь может в любой момент отозвать свое согласие на обработку персональных данных, направив Администратору уведомление посредством электронной почты на электронный адрес Администратора <a href="mailto:info@mbasegeotar.ru">info@mbasegeotar.ru</a> с пометкой «Отзыв согласия на обработку персональных данных».</p>
+            <p class="privacy-policy_list-one"><span>8.5.</span> Вся информация, которая собирается сторонними сервисами, в том числе платежными системами, средствами связи и другими поставщиками услуг, хранится и обрабатывается указанными лицами в соответствии с их Пользовательским соглашением и Политикой конфиденциальности. Администратор не несет ответственность за действия третьих лиц, в том числе указанных в настоящем пункте поставщиков услуг.</p>
+            <p class="privacy-policy_list-one"><span>8.6.</span> Установленные субъектом персональных данных запреты на передачу (кроме предоставления доступа), а также на обработку или условия обработки (кроме получения доступа) персональных данных, разрешенных для распространения, не действуют в случаях обработки персональных данных в государственных, общественных и иных публичных интересах, определенных законодательством РФ.</p>
+            <p class="privacy-policy_list-one"><span>8.7.</span> Администратор при обработке персональных данных обеспечивает конфиденциальность персональных данных.</p>
+            <p class="privacy-policy_list-one"><span>8.8.</span> Администратор осуществляет хранение персональных данных в форме, позволяющей определить субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных данных, если срок хранения персональных данных не установлен федеральным законом, договором, стороной которого, выгодоприобретателем или поручителем по которому является субъект персональных данных.</p>
+            <p class="privacy-policy_list-one"><span>8.9.</span> Условием прекращения обработки персональных данных может являться достижение целей обработки персональных данных, истечение срока действия согласия субъекта персональных данных, отзыв согласия субъектом персональных данных или требование о прекращении обработки персональных данных, а также выявление неправомерной обработки персональных данных.</p>
+        <p><span class="privacy-policy_bold">9. Перечень действий, производимых Администратором с полученными персональными данными</span></p>
+
+        <p class="privacy-policy_list-one"><span>9.1.</span> Администратор осуществляет сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление и уничтожение персональных данных.</p>
+        <p class="privacy-policy_list-one"><span>9.2.</span> Администратор осуществляет автоматизированную обработку персональных данных с получением и/или передачей полученной информации по информационно-телекоммуникационным сетям или без таковой.</p>
+ 
+        <p><span class="privacy-policy_bold">10. Трансграничная передача персональных данных</span></p>
+
+        <p class="privacy-policy_list-one"><span>10.1.</span> Администратор до начала осуществления деятельности по трансграничной передаче персональных данных обязан уведомить уполномоченный орган по защите прав субъектов персональных данных о своем намерении осуществлять трансграничную передачу персональных данных (такое уведомление направляется отдельно от уведомления о намерении осуществлять обработку персональных данных).</p>
+        <p class="privacy-policy_list-one"><span>10.2.</span> Администратор до подачи вышеуказанного уведомления обязан получить от органов власти иностранного государства, иностранных физических лиц, иностранных юридических лиц, которым планируется трансграничная передача персональных данных, соответствующие сведения.</p>
+
+        <p><span class="privacy-policy_bold">11. Конфиденциальность персональных данных</span></p>
+        
+        <p>Администратор и иные лица, получившие доступ к персональным данным, обязаны не раскрывать третьим лицам и не распространять персональные данные без согласия субъекта персональных данных, если иное не предусмотрено федеральным законом.</p>
+
+        <p><span class="privacy-policy_bold">12. Заключительные положения</span></p>
+        
+        <p class="privacy-policy_list-one"><span>12.1.</span> Пользователь может получить любые разъяснения по интересующим вопросам, касающимся обработки его персональных данных, обратившись к Оператору с помощью электронной почты <a href="mailto:info@mbasegeotar.ru">info@mbasegeotar.ru.</a></p>
+        <p class="privacy-policy_list-one"><span>12.2.</span> В данном документе будут отражены любые изменения политики обработки персональных данных Администратором. Политика действует бессрочно до замены ее новой версией.</p>
+        <p class="privacy-policy_list-one"><span>12.3.</span> Актуальная версия Политики в свободном доступе расположена в сети Интернет по адресу <a href="#call=href(pages,privacy_policy)">https://mbasegeotar.ru</a></p>
+
+
+      </div>
+    </div>
+    <!-- #call=include(footer,mbasegeotar) -->
+  </div>
+
+</div>
+
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+
+<div id='page_content'>
+  
+  <div>#call=draw(main_frame,null,get_cur_guide())</div>
+  
+</div><!-- page_content -->
+
+<div id='page_content-guest'>
+
+  <!-- #call=include(page_content,mbasegeotar) -->
+
+</div><!-- page_content -->
+
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+<!-- ###################################################################### -->
+
+<div id="book.main_frame.itxt_master">
+  <!-- #call=solve(on_bmark(book)) -->
+  <!-- #call=include(book_main_frame_itxt_master,reader-2023) -->
+</div><!-- book.main_frame.itxt_master -->
+
+<!-- ###################################################  errors_ok  ################################################ -->
+
+<div id="errors_ok_reg" class="errors_ok_reg">
+  <div class='wrap-ssp-message'>
+    <div class="wrap-ssp">#call=ssp_messages</div>
+    <a class="btn-to-index" href='#call=href(pages,index)'>На главную</a>
+  </div>
+  <div class='wrap-err-message'>
+    <div class="wrap-err">#call=err_messages</div>
+    <a class="btn-to-index" href='#call=href(pages,index)'>На главную</a>
+  </div>
+
+</div>
+
+<div id="errors_ok" class="plus-cont">
+  <div class='wrap-ssp-message container'>
+    <div class="wrap-ssp">#call=ssp_messages</div>
+  </div>
+  <div class='wrap-err-message container'>
+    <div class="wrap-err">#call=err_messages</div>
+  </div>
+</div>
+
+<div id="errors_inside" class="wrap-ssp-err">
+  <div class='wrap-ssp-message'>#call=ssp_messages</div>
+  <div class='wrap-err-message'>#call=err_messages</div>
+</div>
+
+<div id='access_guest_doc' style='border:2px solid #85acd2;margin:1em 1em 1em 1em;padding:1em 1em 1em 1em;'>
+  access_guest_doc
+</div>
+
+<div id='access_guest_book'>
+<a href='#call=href(cur_user)' id="href_cur_user">Авторизоваться</a>
+</div>
+
+<div id='access_denied_doc' style='border:2px solid #85acd2;margin:1em 1em 1em 1em;padding:1em 1em 1em 1em;'>
+  access_denied_doc
+</div>
+
+<div id='access_denied_book' class="access_denied_book">
+
+  <div class="general_wrapper">
+    <div class="code-wrapper">#call=include( subscribe,book-pieces )</div>
+  </div>
+
+</div>
+
+

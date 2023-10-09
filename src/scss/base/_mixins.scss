@@ -1,0 +1,72 @@
+@mixin menu-img-bg($image) {
+    &::before {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        background-image: $image;
+        background-repeat: no-repeat;
+        background-position: center;
+        top: -10px;
+
+    }
+}
+
+@mixin menu-img-bg-mobile($image) {
+    &::before {
+        content: "";
+        width: 24px;
+        height: 24px;
+        position: absolute;
+        background-image: $image;
+        background-repeat: no-repeat;
+        left: 33px;
+        bottom: -3px;
+        background-size: contain;
+    }
+}
+
+@mixin stickerBook ($backgroundColor, $backgroundImage) {
+    position: absolute;
+    right: -1px;
+    top: -1px;
+    border-radius: 8px 8px 0px 8px;
+    background-color:$backgroundColor;
+    // background: #072a84;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    z-index: 2;
+    padding: 6px 23px 5px 14px;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: $backgroundImage;
+        // background-image: url('images/icon/encyclopedia-before.svg');
+        background-repeat: no-repeat;
+        width: 100%;
+        height: 100%;
+        left: -21px;
+        z-index: -1;
+        top: 0;
+    }
+
+}
+
+@mixin mobileStickerBook ($backgroundColor) {
+    position: relative;
+    border-radius: 8px 8px 8px 8px;
+    background-color:$backgroundColor;
+    color: #fff;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    z-index: 2;
+    padding: 6px 15px;
+    width: max-content;
+    margin-bottom: 12px;
+}

@@ -1,0 +1,23 @@
+.reader-doc3 {
+    position: relative;
+    width: 40%;
+    max-height: 600px;
+}
+
+.reader-doc3 .book_wrapper .reader2023_main_content_doc3_toc{
+    width: 100%;
+    max-height: 600px;
+}
+
+.mbase_main-loader{
+    width: 100% !important;
+    margin-left: 0 !important;
+    height: 100% !important;
+     margin-top: 0 !important; 
+    background-color: #fff;
+    background: #fff url('../images/reader2023/reader2023_loader.svg') center center no-repeat;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    z-index: 100;
+}

@@ -1,0 +1,87 @@
+.mbase-nav{
+    background-color: var(--menu-bg);
+    min-height: 100vh;
+    @media(max-width:768px){
+        display: none;
+    }
+}
+
+.mbase-nav > .main_menu-zone{
+    position: sticky;
+    left: 0;
+    top: 0;
+}
+
+.mbase-nav > .main_menu-zone > .level1{
+    display: flex;
+    flex-direction: column;
+    font-size: 11px;
+}
+.search-menu{
+    display: none !important;
+}
+.mbase-nav > .main_menu-zone > .level1 > .main_menu-Last{
+    width: 80px;
+    height: 85px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    // padding-bottom: 18px;
+    border-bottom: 1px solid rgba(242, 245, 255, 0.5);
+    transition: all .3s ease-in;
+    &:hover{
+        background: rgba(7, 42, 132, 0.60);
+        border-bottom: 1px solid rgba(7, 42, 132, 0.60);
+    }
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .main_menu-Current{
+   background: #072A84;
+    &:hover{
+        background: #072A84;
+        border-bottom: 1px solid #072A84;
+    }
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .main_menu-Last a {
+
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 18px;
+    font-size: 11px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .main_menu-Last span{
+    display: none;
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .index-menu a{
+    @include menu-img-bg(url('images/icon/home.svg'));
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .bookmarks-menu a{
+    @include menu-img-bg(url('images/icon/bookmarks.svg'));
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .about-menu a{
+    @include menu-img-bg(url('images/icon/about.svg'));
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .help-menu a{
+    @include menu-img-bg(url('images/icon/info.svg'));
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .search-menu a{
+    @include menu-img-bg(url('images/icon/search_menu.svg'));
+}
+
+.mbase-nav > .main_menu-zone > .level1 > .my_read-menu a{
+    @include menu-img-bg(url('images/icon/you_read.svg'));
+}
+

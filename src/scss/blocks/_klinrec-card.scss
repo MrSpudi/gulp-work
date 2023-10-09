@@ -1,0 +1,98 @@
+.sticker-klinrec-page{
+    .sticker-clinrec_title {
+        margin-bottom: 12px;
+        position: relative;
+    
+        a {
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            line-height: 30px;
+    
+            span {
+                color: #000;
+                font-size: 24px;
+                font-style: normal;
+                line-height: 30px;
+                transition: color .3s ease;
+    
+                &:hover {
+                    color: #526ece;
+                }
+            }
+    
+        }
+    
+        .sticker-clinrec_num {
+            position: absolute;
+            left: -57px;
+            color: #323232;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 18px;
+            top: 5px;
+            width: 40px;
+            text-align: right;
+    
+            @media(max-width:768px) {
+                font-size: 18px;
+                position: static;
+            }
+        }
+    
+        @media(max-width:768px) {
+            font-size: 18px;
+        }
+    }
+
+    .sticker-clinrec_date {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        .sticker-clinrec_date-text {
+            margin-right: 19px;
+            color: #545454;
+            line-height: 18px;
+        }
+
+        .sticker-clinrec_date-year {
+            color: #000;
+            font-weight: 700;
+        }
+    }
+
+    .sticker-clinrec_content {
+        display: flex;
+        align-items: center;
+        column-gap: 9px;
+        margin-bottom: 12px;
+
+        .sticker-clinrec_content-age {
+            background-color: rgba(114, 139, 228, 0.2);
+            border-radius: 8px;
+            padding: 4px 11px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        .sticker-clinrec_content-rf {
+            background-color: rgba(111, 111, 111, 0.2);
+            border-radius: 8px;
+            padding: 4px 11px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+
+        .sticker-clinrec_content-year {
+            background-color: rgba(88, 181, 170, 0.2);
+            border-radius: 8px;
+            padding: 4px 11px;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 18px;
+        }
+    }
+}

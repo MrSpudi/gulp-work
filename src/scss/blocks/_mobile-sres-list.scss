@@ -1,0 +1,112 @@
+.mobile-sres-list {
+
+    display: none;
+
+    @media(max-width:1100px) {
+        display: block;
+        padding-top: 30px;
+        display: flex;
+        flex-direction: column;
+        row-gap: 20px;
+        padding-bottom: 26px;
+        border-bottom: 1px solid rgba(82, 110, 206, 0.30);
+    }
+}
+
+.mobile-sres-list .mobile-sres-list_result {
+    display: flex;
+    column-gap: 5px;
+
+    span {
+        color: #000;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 18px;
+    }
+}
+
+.mobile-sres-list .mobile-sres-list_title {
+    color: #526ECE;
+    font-size: 18px;
+}
+
+.mobile-sres-list .mobile-sres-list_btn {
+    display: flex;
+    justify-content: flex-start;
+    column-gap: 100px
+}
+
+.mobile-sres-list .mobile-sres-list_btn .mobile-sres-list_btn-sort{
+    padding-right: 20px;
+    background-image: url('images/icon/filter_active.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.mobile-sres-list .mobile-sres-list_btn .mobile-sres-list_btn-filter{
+    padding-right: 20px;
+    background-image: url('images/icon/mobile-filter.svg');
+    background-repeat: no-repeat;
+    background-position: center right;
+}
+
+.mobile-sres-list .mobile-sres-list_link .search_areas {
+    display: block;
+    padding-top: 0px;
+
+}
+
+.mobile-sres-list .mobile-sres-list_link .search_areas .search_areas_list {
+    padding: 0px 0px 10px 0px;
+
+    @media(max-width:1100px) {
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 12px;
+        // padding-bottom: 26px;
+    }
+}
+
+.mobile-sres-list .search_areas_cell .sacmenu_cur::before {
+    bottom: -5px;
+}
+
+.mobile-sres-list .search_areas_cell:hover::before {
+    content: '';
+    position: absolute;
+    bottom: -12px;
+    height: 0px;
+    background-color: #526ECE;
+    opacity: 1;
+    transition: opacity .3s ease-in;
+}
+
+.mobile-filters{
+    position: fixed;
+    height: 100%;
+    right: -1000px;
+    bottom: 0;
+    background-color: #f2f5ff;
+    z-index: 99;
+    transition: right .5s ease-in;
+}
+
+.mobile-filters.mobile-filters_active{
+transition: right .7s ease;
+right: 0;
+}
+
+.mobile-filters_content {
+    padding: 30px;
+}
+
+.mobile-filters_overlay{
+    display: none;
+}
+
+.mobile-filters_active .mobile-filters_overlay{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+}

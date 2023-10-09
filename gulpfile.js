@@ -44,9 +44,9 @@ const plumberNotify = (title) => {
 gulp.task('sass:docs', function () {
 	return gulp
 		.src('./src/scss/*.scss')
-		.pipe(changed('./docs/css/'))
+		.pipe(changed('./docs'))
 		.pipe(plumber(plumberNotify('SCSS')))
-		.pipe(sourceMaps.init())
+		// .pipe(sourceMaps.init())
 		.pipe(sassGlob())
 		// .pipe(groupMedia())
 		.pipe(sass())
@@ -54,52 +54,51 @@ gulp.task('sass:docs', function () {
 			overrideBrowserslist: ['last 4 versions']
 		}))
 		.pipe(csso())
-		.pipe(sourceMaps.write())
-		.pipe(gulp.dest('./docs/css/'));
+		// .pipe(sourceMaps.write())
+		.pipe(gulp.dest('./docs'));
 });
 
 gulp.task('images:docs', function () {
 	return gulp
-		.src('./src/img/**/*')
-		.pipe(changed('./docs/img/'))
+		.src('./src/images/**/*')
+		.pipe(changed('./docs/images/'))
 		.pipe(webp())
-		.pipe(gulp.dest('./docs/img/'))
-		.pipe(gulp.src('./src/img/**/*'))
-		.pipe(changed('./docs/img/'))
+		.pipe(gulp.dest('./docs/images/'))
+		.pipe(gulp.src('./src/images/**/*'))
+		.pipe(changed('./docs/images/'))
 		.pipe(imagemin({
 			verbose: true
 		}))
-		.pipe(gulp.dest('./docs/img/'));
+		.pipe(gulp.dest('./docs/images/'));
 });
 
-gulp.task('fonts:docs', function () {
-	return gulp
-		.src('./src/fonts/**/*')
-		.pipe(changed('./docs/fonts/'))
-		.pipe(gulp.dest('./docs/fonts/'));
-});
+// gulp.task('fonts:docs', function () {
+// 	return gulp
+// 		.src('./src/fonts/**/*')
+// 		.pipe(changed('./docs/fonts/'))
+// 		.pipe(gulp.dest('./docs/fonts/'));
+// });
 
-gulp.task('files:docs', function () {
-	return gulp
-		.src('./src/files/**/*')
-		.pipe(changed('./docs/files/'))
-		.pipe(gulp.dest('./docs/files/'));
-});
+// gulp.task('files:docs', function () {
+// 	return gulp
+// 		.src('./src/files/**/*')
+// 		.pipe(changed('./docs/files/'))
+// 		.pipe(gulp.dest('./docs/files/'));
+// });
 
 gulp.task('js:docs', function () {
 	return gulp
 		.src('./src/js/*.js')
-		.pipe(changed('./docs/js/'))
+		.pipe(changed('./docs'))
 		.pipe(rigger())
 		.pipe(plumber(plumberNotify('JS')))
-		.pipe(gulp.dest('./docs/js/'));
+		.pipe(gulp.dest('./docs'));
 });
-
 
 gulp.task(
 	'default',
 	gulp.series(
 		'clean:docs',
-		gulp.parallel('sass:docs', 'images:docs', 'fonts:docs', 'files:docs', 'js:docs'),
+		gulp.parallel('sass:docs', 'images:docs', 'js:docs'),
 	)
 );

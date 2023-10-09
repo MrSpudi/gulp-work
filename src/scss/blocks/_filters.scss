@@ -1,0 +1,147 @@
+.sres-list-navigation-content .filters-head {
+    color: #000;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 18px;
+    margin-bottom: 25px;
+}
+
+
+.sres-list-navigation-content>.filters-button[value="Применить"] {
+    width: 133px;
+    height: 32px;
+    background-color: #526ECE;
+    color: #fff;
+    border-radius: 16px;
+    border: 1px solid #526ECE;
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        border: 1px solid rgba(7, 42, 132, 0.60);
+        background-color: rgba(7, 42, 132, 0.60);
+    }
+}
+
+.sres-list-navigation-content>.filters-button[value="Сбросить"] {
+    width: 133px;
+    height: 32px;
+    background-color: #fff;
+    color: #526ECE;
+    border-radius: 16px;
+    margin-left: 10px;
+    border: 1px solid rgba(82, 110, 206, 0.30);
+    cursor: pointer;
+    transition: all .3s ease;
+
+    &:hover {
+        border: 1px solid rgba(7, 42, 132, 0.60);
+        color: rgba(7, 42, 132, 0.60);
+    }
+}
+
+
+.sres-list-navigation-content .filter_gd {
+    margin-top: 25px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    max-height: 400px;
+    overflow-y: auto;
+}
+.sres-list-navigation-content .filter_gd::-webkit-scrollbar{
+    width: 6px;
+    height: 6px;
+}
+.sres-list-navigation-content .filter_gd::-webkit-scrollbar-thumb{
+    background-color: #9FA9CB;
+    width: 6px;
+    border-radius: 9em;
+    transition: background-color 0.8s;
+}
+.sres-list-navigation-content .filter_gd-head {
+    color: #000;
+    font-size: 18px;
+    line-height: 26px;
+    margin-bottom: 10px;
+}
+
+.sres-list-navigation-content .filter_gd-chb {
+
+
+    span {
+        color: rgba(0, 0, 0, 0.80);
+    }
+}
+
+.sres-list-navigation-content .filter_gd-chb>input {
+    // position: absolute;
+    z-index: -1;
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.sres-list-navigation-content .filter_gd-chb>span {
+    display: inline-flex;
+    align-items: center;
+    user-select: none;
+  }
+  
+.sres-list-navigation-content .filter_gd-chb>span::before {
+    content: '';
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    flex-shrink: 0;
+    flex-grow: 0;
+    border: 2px solid #9FA9CB;
+    border-radius: 0.25em;
+    margin-right: 0.5em;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 50% 50%;
+  }
+  
+  .sres-list-navigation-content  .filter_gd-chb>input:not(:disabled):not(:checked)+span:hover::before {
+    border-color: #9FA9CB;
+  }
+  
+  .sres-list-navigation-content .filter_gd-chb>input:not(:disabled):active+span::before {
+    background-color: #b3d7ff;
+    border-color: #b3d7ff;
+  }
+  
+  .sres-list-navigation-content .filter_gd-chb>input:checked+span::before {
+    border-color: #526ECE;
+    background-image: url('images/icon/filter_checkbox.svg');
+    background-size:contain;
+    background-color:#fff;
+    color: #526ECE;
+  }
+
+  .sres-list-navigation-content .filter_gd-chb input[type=checkbox]:checked + span { 
+    color: #526ECE;
+   }
+
+   .sres-list-navigation-content .filter_gd-chb span{
+    transition: color .3s ease;
+    word-break: break-word;
+    &:hover{
+        color: #526ECE;
+    }
+   }
+
+   .sres-list-navigation-content .filter_gd-more{
+    margin-top: 5px;
+   }
+
+   .sres-list-navigation-content .filter_gd-more a{
+    color: #526ECE;
+    font-size: 15px;
+    line-height: 28px;
+    transition: color .3s ease;
+&:hover{
+    color:#072A84;
+}
+   }

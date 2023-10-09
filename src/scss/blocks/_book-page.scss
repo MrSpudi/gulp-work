@@ -1,0 +1,259 @@
+.book_wrapper {
+  display: flex;
+  justify-content: space-between;
+  column-gap: 20px;
+  padding-top: 30px;
+  align-items: flex-start;
+  margin-bottom: 30px;
+
+  .doc3_toc_book {
+    max-height: 100%;
+  }
+
+  a {
+    color: #000;
+  }
+
+  .reader2023_main_content_doc3_toc {
+    // width: 40%;
+    max-height: 600px;
+  }
+
+  .book-card {
+    width: 60%;
+    .sticker-pharma_farm-group{
+      margin-bottom: 12px;
+      line-height: 20px;
+      .head {
+          color: rgba(0, 0, 0, 0.50);
+          font-style: normal;
+          font-weight: 400;
+          line-height: 18px;
+          margin-right: 20px;
+      }
+  
+      .value {
+          color: #000;
+          font-weight: 700;
+          line-height: 18px;
+      }
+  }
+  }
+
+  .stickerBookColumn {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 15px;
+  }
+
+  .stickerBookRight {
+    width: 64px;
+    display: flex;
+    flex-shrink: 0;
+  }
+
+  .stickerBookLeft {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+  }
+
+  .book-btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+    a {
+      display: inline-block;
+      padding: 14px 20px;
+      border-radius: 16px;
+      color: #fff;
+      -webkit-transition: all .3s;
+      transition: all .3s;
+      position: relative;
+      overflow: hidden;
+      z-index: 1;
+      cursor: pointer;
+      max-width: 364px;
+      width: 100%;
+      text-align: center;
+      /* height: 46px; */
+      /* vertical-align: middle; */
+      border-radius: 32px;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #526ECE;
+        border-radius: 16px;
+        z-index: -2;
+      }
+
+      &:before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 0%;
+        height: 100%;
+        background-color: rgba(7, 42, 132, 0.60);
+        transition: all .3s;
+        border-radius: 16px;
+        z-index: -1;
+      }
+
+      &:hover {
+        color: #fff;
+
+        &:before {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+.book-card .b_s_authors,
+.b_s_publishing,
+.b_s_type_publishing,
+.b_s_type_year,
+.b_s_type_ISBN,
+.b_s_type_UDK,
+.b_s_type_BBK,
+.b_s_type_authors_mark,
+.b_s_type_grif,
+.b_s_med_s {
+  .head {
+    color: rgba(0, 0, 0, 0.50);
+    line-height: 22px;
+    /* 146.667% */
+    margin-right: 15px;
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+
+  .value {
+
+    font-weight: 700;
+    line-height: 20px;
+    /* 133.333% */
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+  @media(max-width:768px){
+    font-size: 13px;
+  }
+}
+
+.book-card .b_s_title {
+  color: #323232;
+  font-size: 24px;
+  line-height: 30px;
+}
+
+.book-card .b_s_for_annotation {
+  font-size: 15px;
+  line-height: 24px;
+  letter-spacing: 0.5px;
+  margin-bottom: 23px;
+  margin-top: 14px;
+}
+
+.book-card .wrap-download-update {
+  // margin-bottom: 25px;
+  margin-top: 15px;
+  .wrap-download-update-text {
+    color: rgba(0, 0, 0, 0.50);
+    line-height: 22px;
+    /* 146.667% */
+    margin-right: 15px;
+  }
+
+  .wrap-download-update-data {
+    font-weight: 700;
+    line-height: 20px;
+    /* 133.333% */
+  }
+}
+
+.book-card .b_s_authors:empty,
+.b_s_publishing:empty,
+.b_s_type_publishing:empty,
+.b_s_type_year:empty,
+.b_s_type_ISBN:empty,
+.b_s_type_UDK:empty,
+.b_s_type_BBK:empty,
+.b_s_type_authors_mark:empty,
+.b_s_type_grif:empty,
+.b_s_for_annotation:empty,
+.wrap-download-update:empty{
+  display: none;
+}
+.med_standards{
+  border:none;
+  padding: 0px;
+}
+.med_standards{
+  .stickerSengineTitle{
+    margin-bottom: 12px;
+    position: relative;
+
+    a {
+        color: #000;
+        font-size: 24px;
+        font-style: normal;
+        line-height: 30px;
+
+        span {
+            color: #000;
+            font-size: 24px;
+            font-style: normal;
+            line-height: 30px;
+            transition: color .3s ease;
+
+            &:hover {
+                color: #526ece;
+            }
+        }
+  }
+}
+}
+.b_s_med_code {
+  .head {
+    color: rgba(0, 0, 0, 0.50);
+    line-height: 22px;
+    /* 146.667% */
+    margin-right: 15px;
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+
+  .value {
+
+    font-weight: 400;
+    line-height: 20px;
+    /* 133.333% */
+    @media(max-width:768px){
+      font-size: 13px;
+    }
+  }
+  @media(max-width:768px){
+    font-size: 13px;
+  }
+}
+
+.b_s_med_s{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  .b_s_med_s_list{
+    span{
+      margin-right: 5px;
+    }
+  }
+}

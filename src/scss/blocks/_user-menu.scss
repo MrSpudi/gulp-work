@@ -1,0 +1,206 @@
+.user_menu {
+
+    background-color: rgba(242, 245, 255, 1);
+    box-shadow: inset 0 -7px 20px -10px #D0D7F0;
+}
+
+.user_menu_container {
+    position: relative;
+    display: flex;
+    overflow: hidden;
+    margin: 0 auto;
+    align-items: flex-end;
+    height: 85px;
+    max-width: 675px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0 15px;
+
+    @media(max-width:660px) {
+        height: auto;
+        flex-direction: column;
+        row-gap: 15px;
+        padding: 10px 15px;
+    }
+}
+
+.user_menu_container .user_menu_link {
+    position: relative;
+    padding: 10px 40px 10px 40px;
+    text-align: center;
+    z-index: 1;
+    border-radius: 16px;
+    color: #fff;
+    text-decoration: none;
+    transition: height .4s ease;
+    height: 43px;
+}
+
+.user_menu_container .user_menu_link a {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+}
+
+.user_menu_container .user_menu_link span {
+    color: #fff;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 20px;
+    cursor: pointer;
+}
+
+.user_menu_container .user_menu_link--myData {
+    z-index: 4;
+    position: relative;
+    left: 26px;
+
+    @media(max-width:660px) {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.user_menu_container .user_menu_link--changePassword {
+    z-index: 3;
+    position: relative;
+    left: 8px;
+
+    @media(max-width:660px) {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.user_menu_container .user_menu_link--Bookmarks {
+    z-index: 2;
+    right: 8px;
+
+    @media(max-width:660px) {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.user_menu_container .user_menu_link--Access {
+    z-index: 1;
+    right: 26px;
+
+    @media(max-width:660px) {
+        left: 0;
+        width: 100%;
+    }
+}
+
+.user_menu_container .user_menu_link--myData ::before {
+
+    background-image: url('images/icon/MyData.svg');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 16px 16px 0 0;
+    background-size: cover;
+    z-index: -1;
+
+    background-repeat: no-repeat;
+    background-position: right;
+
+    @media(max-width: 660px) {
+        background-color: #3F58B0;
+        border-radius: 32px;
+    }
+}
+
+.user_menu_container .user_menu_link--changePassword ::before {
+    background-image: url('images/icon/ChangePassword.svg');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+    background-size: cover;
+    @media(max-width: 660px) {
+        background-color: #526ECE;
+        border-radius: 32px;
+    }
+}
+
+.user_menu_container .user_menu_link--Bookmarks ::before {
+    background-image: url('images/icon/Bookmarks.svg');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+    background-size: cover;
+    @media(max-width: 660px) {
+        background-color: #6A84DE;
+        border-radius: 32px;
+    }
+}
+
+.user_menu_container .user_menu_link--Access ::before {
+    background-image: url('images/icon/Access.svg');
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+    background-size: cover;
+    @media(max-width: 660px) {
+        background-color:#8A9BD6;
+        border-radius: 32px;
+    }
+
+}
+
+// .user_menu_container .user_menu_link:hover {
+//     height: 46px;
+    
+// }
+
+.user_menu_container .user_menu_link:has(.utab_anchor_cur) ::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px 20px 0 0;
+    background-image: url('images/icon/UserActiveLink.svg');
+    background-repeat: no-repeat;
+    background-position: right;
+    z-index: -1;
+    background-size: cover;
+    @media(max-width: 660px) {
+        background-color:#fff;
+        border-radius: 32px;
+    }
+}
+
+.user_menu_container .user_menu_link .utab_anchor_cur {
+    color: #000 !important;
+}
